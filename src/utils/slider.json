@@ -1,38 +1,38 @@
 [
   {
-    "name": "Aliva Priva Jardin",
-    "price": "47,043",
-    "detail": "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
+    "name": "Hardin Primera",
+    "price": "35,000,000",
+    "detail": "Block 38, Dasmariñas Village, Dasmariñas City, Cavite",
     "image": "./r1.png"
   },
   {
-    "name": "Asatti Garden City",
-    "price": "66,353",
-    "detail": "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
+    "name": "The Cube Residences",
+    "price": "48,560,000",
+    "detail": "#402 Solar Street, Barangay Bel-Air 3, Makati City, Metro Manila, Philippines",
     "image": "./r2.png"
   },
   {
-    "name": "Citralan Puri Serang",
-    "price": "35,853",
-    "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
+    "name": "Meadow View 1",
+    "price": "56,900,000",
+    "detail": "Block 13, San Lorenzo Village. A. Arnaiz Ave. , Makati City, Metro Manila, Philippines",
     "image": "./r3.png"
   },
   {
-    "name": "Aliva Priva Jardin",
-    "price": "47,043",
-    "detail": "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
+    "name": "Hardin Segunda",
+    "price": "35,000,000",
+    "detail": "Block 46, Dasmariñas Village, Dasmariñas City, Cavite",
     "image": "./r1.png"
   },
   {
-    "name": "Asatti Garden City",
-    "price": "66,353",
-    "detail": "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
+    "name": "The Cube Residences 2",
+    "price": "48,560,000",
+    "detail": "#402 Solar Street, Barangay Bel-Air 3, Makati City, Metro Manila, Philippines",
     "image": "./r2.png"
   },
   {
-    "name": "Citralan Puri Serang",
-    "price": "35,853",
-    "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
+    "name": "Meadow View 2",
+    "price": "58,900,000",
+    "detail": "Block 27, San Lorenzo Village. A. Arnaiz Ave. , Makati City, Metro Manila, Philippines",
     "image": "./r3.png"
   }
 ]
