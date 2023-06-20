@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import ScrollToTop from "react-scroll-to-top";
 const Footer = () => {
   return (
     <div className="f-wrapper">
@@ -22,6 +23,7 @@ const Footer = () => {
             <span>Product</span>
             <span>About Us</span>
           </div>
+          <ScrollToTop smooth top="400"/>
         </div>
       </div>
     </div>
