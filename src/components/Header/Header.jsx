@@ -30,9 +30,7 @@ const Header = () => {
             <a href="#value">Our Value</a>
             <a href="#contact-us">Contact Us</a>
             <a href="#get-started">Get Started</a>
-            <button className="button">
-              <a href="mailto:homyz@gmail.com">Contact</a>
-            </button>
+            <button className="button">Sign In</button>
           </div>
         </OutsideClickHandler>
 
