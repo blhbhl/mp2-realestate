@@ -39,7 +39,7 @@ const Contact = () => {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Chat through Messenger</span>
-                    <span className="secondaryText">John Irvin Kenneth Casiano</span>
+                    <span className="secondaryText">Irvin Christian Operio, John Angelo Casiano, John Kenneth Jumawan</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Chat now</div>
@@ -55,7 +55,7 @@ const Contact = () => {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Video Call</span>
-                    <span className="secondaryText">John Irvin Kenneth Casiano</span>
+                    <span className="secondaryText">Irvin Christian Operio, John Angelo Casiano, John Kenneth Jumawan</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Video Call now</div>
