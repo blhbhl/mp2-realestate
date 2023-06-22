@@ -29,7 +29,7 @@ const Contact = () => {
                     <span className="secondaryText">(212)456-7890</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Call now</div>
+                <div className="flexCenter button">Call Now</div>
               </div>
 
               <div className="flexColCenter mode">
@@ -42,7 +42,7 @@ const Contact = () => {
                     <span className="secondaryText">Irvin Christian Operio, John Angelo Casiano, John Kenneth Jumawan</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Chat now</div>
+                <div className="flexCenter button">Chat Now</div>
               </div>
             </div>
 
@@ -54,11 +54,11 @@ const Contact = () => {
                     <BsFillChatDotsFill size={25} />
                   </div>
                   <div className="flexColStart detail">
-                    <span className="primaryText">Video Call</span>
-                    <span className="secondaryText">Irvin Christian Operio, John Angelo Casiano, John Kenneth Jumawan</span>
+                    <span className="primaryText">Email Us</span>
+                    <span className="secondaryText">homyz-teams@gmail.com</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Video Call now</div>
+                <div className="flexCenter button">Email Now</div>
               </div>
 
               <div className="flexColCenter mode">
