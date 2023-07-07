@@ -27,6 +27,7 @@ const Header = () => {
             style={getMenuStyles(menuOpened)}
           >
             <a href="#residencies">Residencies</a>
+            <a href="#residencies">Services</a>
             <a href="#value">Our Value</a>
             <a href="#contact-us">Contact Us</a>
             <a href="#get-started">Get Started</a>
