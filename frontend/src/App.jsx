@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Residencies from "./components/Residencies/Residencies";
 import Value from "./components/Value/Value";
+import ServicePage from "./components/ServicePage/ServicePage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Hero />
         </div>
         <Companies />
+        <ServicePage/>
         <Residencies />
         <Value />
         <Contact />
