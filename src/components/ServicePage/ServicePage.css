@@ -1,7 +1,7 @@
   /**
    * typography
    */
-   root: {
+   :root{
 
    --fs-1: 1.875rem;
    --fs-2: 1.5rem;
