@@ -1,0 +1,98 @@
+{
+  "hash": "a060901a",
+  "browserHash": "5cc24dbc",
+  "optimized": {
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "57bdded7",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "734ac1a8",
+      "needsInterop": true
+    },
+    "react-accessible-accordion": {
+      "src": "../../node_modules/react-accessible-accordion/dist/es/index.js",
+      "file": "react-accessible-accordion.js",
+      "fileHash": "59e6bf0b",
+      "needsInterop": false
+    },
+    "react-countup": {
+      "src": "../../node_modules/react-countup/build/index.js",
+      "file": "react-countup.js",
+      "fileHash": "76052595",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "5f20a8dc",
+      "needsInterop": true
+    },
+    "react-icons/bi": {
+      "src": "../../node_modules/react-icons/bi/index.esm.js",
+      "file": "react-icons_bi.js",
+      "fileHash": "9805fbbe",
+      "needsInterop": false
+    },
+    "react-icons/bs": {
+      "src": "../../node_modules/react-icons/bs/index.esm.js",
+      "file": "react-icons_bs.js",
+      "fileHash": "75c47016",
+      "needsInterop": false
+    },
+    "react-icons/hi": {
+      "src": "../../node_modules/react-icons/hi/index.esm.js",
+      "file": "react-icons_hi.js",
+      "fileHash": "7cca4fa2",
+      "needsInterop": false
+    },
+    "react-icons/hi2": {
+      "src": "../../node_modules/react-icons/hi2/index.esm.js",
+      "file": "react-icons_hi2.js",
+      "fileHash": "11b12fba",
+      "needsInterop": false
+    },
+    "react-icons/md": {
+      "src": "../../node_modules/react-icons/md/index.esm.js",
+      "file": "react-icons_md.js",
+      "fileHash": "512f23ce",
+      "needsInterop": false
+    },
+    "react-outside-click-handler": {
+      "src": "../../node_modules/react-outside-click-handler/index.js",
+      "file": "react-outside-click-handler.js",
+      "fileHash": "4bb498e4",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "1b8ee1b4",
+      "needsInterop": false
+    },
+    "react-scroll-to-top": {
+      "src": "../../node_modules/react-scroll-to-top/dist/index.js",
+      "file": "react-scroll-to-top.js",
+      "fileHash": "fb4f0705",
+      "needsInterop": true
+    },
+    "swiper/react": {
+      "src": "../../node_modules/swiper/react/swiper-react.js",
+      "file": "swiper_react.js",
+      "fileHash": "fb70c4ef",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-A7SVCLWC": {
+      "file": "chunk-A7SVCLWC.js"
+    },
+    "chunk-HS7GO4I2": {
+      "file": "chunk-HS7GO4I2.js"
+    }
+  }
+}
