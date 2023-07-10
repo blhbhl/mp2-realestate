@@ -8,6 +8,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import AppPage from "./components/BuyerPage/AppPage";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <RegisterForm/>,
+  },
+  {
+    path: "/buy-a-home",
+    element: <AppPage />,
   }
 
 ]);
