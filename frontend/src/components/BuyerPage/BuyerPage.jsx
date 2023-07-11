@@ -8,7 +8,6 @@ const BuyerPage = (props) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     const Modal = ({ setOpenModal }) => {
-        if (!open) return null
         return (
             <>
                 <div className="overlay">
