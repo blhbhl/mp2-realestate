@@ -12,7 +12,7 @@ const AppPage = () => {
                     <div>
                     </div>
                     <div className='search'>
-                        <div class="position" data-te-input-wrapper-init>
+                        <div className="position" data-te-input-wrapper-init>
                             <input
                                 type="search"
                                 className="peer border-slate-950 block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-black dark:placeholder:text-black dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
@@ -46,31 +46,31 @@ const AppPage = () => {
                 <div>
                     <div className='pagination'>
                         <nav aria-label="Page navigation example">
-                            <ul class="ulclass">
+                            <ul className="ulclass">
                                 <li>
-                                    <a href="#" class="previous">
-                                        <span class="sr-only">Previous</span>
+                                    <a href="#" className="previous">
+                                        <span className="sr-only">Previous</span>
                                         <BiSolidLeftArrow className='left text-[#1F3E72] text-xl' />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nonactive">1</a>
+                                    <a href="#" className="nonactive">1</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nonactive">2</a>
+                                    <a href="#" className="nonactive">2</a>
                                 </li>
                                 <li>
-                                    <a href="#" aria-current="page" class="active">3</a>
+                                    <a href="#" aria-current="page" className="active">3</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nonactive">4</a>
+                                    <a href="#" className="nonactive">4</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nonactive">5</a>
+                                    <a href="#" className="nonactive">5</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="next">
-                                        <span class="sr-only">Next</span>
+                                    <a href="#" className="next">
+                                        <span className="sr-only">Next</span>
                                         <BiSolidRightArrow className='right' />
                                     </a>
                                 </li>
