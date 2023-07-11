@@ -23,7 +23,7 @@ const BuyerPage = (props) => {
                                         <h1 className="title">
                                         </h1>
                                         <div className='describe'>
-                                            <div class="color">
+                                            <div className="color">
                                                 <div className='describe1'>
                                                     <h2 className='title-name'>Description</h2>
                                                     <hr className='line' />
