@@ -14,13 +14,13 @@ const BuyerPage = (props) => {
                 <div className="overlay">
                     <div className="modalContainer">
                         <div>
-                            <section class="modal">
+                            <section className="modal">
                                 <div className='text'>
                                     <h3 className='name'>{props.name}</h3>
                                 </div>
-                                <div class="container">
-                                    <div class="white">
-                                        <h1 class="title">
+                                <div className="container">
+                                    <div className="white">
+                                        <h1 className="title">
                                         </h1>
                                         <div className='describe'>
                                             <div class="color">
