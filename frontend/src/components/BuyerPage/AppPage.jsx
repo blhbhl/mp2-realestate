@@ -6,7 +6,7 @@ import './AppPage.css'
 
 const AppPage = () => {
     return (
-        <div>
+        <>
             <div className='page'>
                 <div>
                     <div>
@@ -79,7 +79,7 @@ const AppPage = () => {
                     </div>
                 </div>
             </div >
-        </div>
+        </>
     )
 }
 
