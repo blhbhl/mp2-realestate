@@ -1,5 +1,10 @@
+* {
+  background-color: white;
+}
+
 .page {
   overflow-x: hidden;
+  background-color: white;
 }
 
 .search {
@@ -16,9 +21,10 @@
 .pagination {
   display: flex;
   text-align: center;
+  position: absolute;
   justify-content: center;
-  margin-left: 8px;
-  margin-top: 140px;
+  margin-left: 512px;
+  margin-top: -100px;
   margin-bottom: 5rem;
 }
 

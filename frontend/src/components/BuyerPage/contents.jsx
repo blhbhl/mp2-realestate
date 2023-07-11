@@ -64,8 +64,8 @@ const HousesData = [
         productType: "houseAndLot",
         description: "The contemporary modern house is a sleek and sophisticated architectural masterpiece that embodies cutting-edge design principles. Its clean lines, open floor plans, and abundant use of glass create a seamless blend between indoor and outdoor living spaces, allowing natural light to flood the interior. ",
         price: '1,190,000',
-        address: '2/F Finlandia, 2894 Galvani Street, Makaty City, Metro Manila, Philippines',
-        location: '2/F Finlandia, 2894 Galvani Street, Makaty City, Metro Manila, Philippines',
+        address: '2894 Galvani Street, Makati City, Metro Manila, Philippines',
+        location: ' 2894 Galvani Street, Makaty City, Metro Manila, Philippines',
         bed: '4 Beds',
         bath: '4 Bathrooms',
         sqms: '1966'

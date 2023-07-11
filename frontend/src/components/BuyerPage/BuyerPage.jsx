@@ -83,49 +83,49 @@ const BuyerPage = (props) => {
     }
 
     return (
-        <div className=''>
-
+        <div className='wrap'>
             <div className='box'>
-                <div className='box-content'>
+                <div className='wrapper'>
                     <div className=''>
-                        <section className="productList">
+                        <section className="productList" >
                             <div className="container1">
-                                <div className="">
-                                    <img className='img1' src={props.image} />
-                                    <div key={props.id} className="id">
-                                        <div className="card">
-                                            <div className='icons'>
-                                                <h3 className="icons1"><span className='pesos'>₱</span>{props.price}</h3>
-                                                <div className="icons2">
-                                                    {isActive ? <BsBookmarkHeartFill onClick={() => {
-                                                        setIsActive(!isActive)
-                                                    }} /> :
-                                                        <BsBookmarkHeart onClick={() => {
+                                <div className="" >
+                                    <div>
+                                        <img className='img1' src={props.image} />
+                                        <div key={props.id} className="id">
+                                            <div className="card">
+                                                <div className='icons'>
+                                                    <h3 className="icons1"><span className='pesos'>₱</span>{props.price}</h3>
+                                                    <div className="icons2">
+                                                        {isActive ? <BsBookmarkHeartFill onClick={() => {
                                                             setIsActive(!isActive)
-                                                        }} />
-                                                    }
+                                                        }} /> :
+                                                            <BsBookmarkHeart onClick={() => {
+                                                                setIsActive(!isActive)
+                                                            }} />
+                                                        }
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <h3 className="name1">{props.name}</h3>
-                                            <p className="address">{props.address}</p>
-                                            <hr className='hrline2' />
-                                            <div className='div'>
-                                                <div className='bed1'><h2 className='bed2'>{props.bed}</h2><LuBedDouble className='txt' /></div>
-                                                <div className='bed1'><h2 className='bed2'>{props.bath}</h2><LuBath className='txt' /></div>
-                                            </div>
-                                            <div>
-                                                <div className='buttonModal'>
-                                                    <div className="App">
-                                                        <button
-                                                            className="openModalBtn"
-                                                            onClick={() => {
-                                                                setModalOpen(true);
-                                                            }}
-                                                        >
-                                                            See More!
-                                                        </button>
-
-                                                        {modalOpen && <Modal setOpenModal={setModalOpen} />}
+                                                <h3 className="name1">{props.name}</h3>
+                                                <p className="address">{props.address}</p>
+                                                <hr className='hrline23' />
+                                                <div className='div'>
+                                                    <div className='bed1'><h2 className='bed2'>{props.bed}</h2><LuBedDouble className='txt' /></div>
+                                                    <div className='bed1'><h2 className='bed2'>{props.bath}</h2><LuBath className='txt' /></div>
+                                                </div>
+                                                <div>
+                                                    <div className='buttonModal'>
+                                                        <div>
+                                                            <button
+                                                                className='btnModal'
+                                                                onClick={() => {
+                                                                    setModalOpen(true);
+                                                                }}
+                                                            >
+                                                                See More!
+                                                            </button>
+                                                            {modalOpen && <Modal setOpenModal={setModalOpen} />}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -138,7 +138,9 @@ const BuyerPage = (props) => {
                     </div>
                 </div >
             </div >
+
         </div>
+
     )
 }
 
