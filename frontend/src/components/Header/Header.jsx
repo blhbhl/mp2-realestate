@@ -6,7 +6,6 @@ import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
 import LoginForm from "../../pages/Login/LoginForm";
-import RegisterForm from "../../pages/Register/RegisterForm";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);

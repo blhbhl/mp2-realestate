@@ -1,19 +1,18 @@
 import React from 'react'
 import BuyerPage from './BuyerPage'
 import contents from './contents'
-import Header from '../Header/Header'
 import { BiSolidRightArrow, BiSolidLeftArrow } from 'react-icons/bi'
+import './AppPage.css'
 
 const AppPage = () => {
     return (
-        <div>
-            <Header />
-            <div className='overflow-x-hidden'>
+        <>
+            <div className='page'>
                 <div>
                     <div>
                     </div>
-                    <div className='flex justify-center text-center'>
-                        <div className="relative mb-3" data-te-input-wrapper-init>
+                    <div className='search'>
+                        <div class="position" data-te-input-wrapper-init>
                             <input
                                 type="search"
                                 className="peer border-slate-950 block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-black dark:placeholder:text-black dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
@@ -45,34 +44,34 @@ const AppPage = () => {
                     </div>
                 </div>
                 <div>
-                    <div className='flex text-center justify-center ml-[8px] mt-[140px] mb-20'>
+                    <div className='pagination'>
                         <nav aria-label="Page navigation example">
-                            <ul className="flex items-center -space-x-px h-10 text-base text-gray-600">
+                            <ul class="ulclass">
                                 <li>
-                                    <a href="#" className="flex items-center justify-center bg-none">
-                                        <span className="sr-only">Previous</span>
-                                        <BiSolidLeftArrow className='text-[#1F3E72] text-xl' />
+                                    <a href="#" class="previous">
+                                        <span class="sr-only">Previous</span>
+                                        <BiSolidLeftArrow className='left text-[#1F3E72] text-xl' />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-center justify-center rounded-3xl px-4 mx-3 h-10 shadow-sm shadow-gray-400 hover:bg-gray-400 hover:text-white bg-white">1</a>
+                                    <a href="#" class="nonactive">1</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-center justify-center rounded-3xl px-4 mx-3 h-10 shadow-sm shadow-gray-400 leading-tight hover:bg-gray-400 hover:text-white bg-white">2</a>
+                                    <a href="#" class="nonactive">2</a>
                                 </li>
                                 <li>
-                                    <a href="#" aria-current="page" className="z-10 flex items-center justify-center rounded-3xl px-4 h-10 mx-3 shadow-sm shadow-gray-400 leading-tight hover:bg-[#1F3E72] hover:text-white bg-[#FFA500]">3</a>
+                                    <a href="#" aria-current="page" class="active">3</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-center justify-center rounded-3xl px-4 mx-3 h-10 shadow-sm shadow-gray-400 leading-tight hover:bg-gray-400 hover:text-white bg-white">4</a>
+                                    <a href="#" class="nonactive">4</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-center justify-center rounded-3xl px-4 mx-3 h-10 shadow-sm shadow-gray-400 leading-tight hover:bg-gray-400 hover:text-white bg-white">5</a>
+                                    <a href="#" class="nonactive">5</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-center justify-center bg-none">
-                                        <span className="sr-only">Next</span>
-                                        <BiSolidRightArrow className='text-[#1F3E72] text-xl' />
+                                    <a href="#" class="next">
+                                        <span class="sr-only">Next</span>
+                                        <BiSolidRightArrow className='right' />
                                     </a>
                                 </li>
                             </ul>
@@ -80,7 +79,7 @@ const AppPage = () => {
                     </div>
                 </div>
             </div >
-        </div>
+        </>
     )
 }
 
