@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import AppPage from "./components/BuyerPage/AppPage";
+import SellAHome from "./pages/SellAHome/SellAHome";
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/buy-a-home",
     element: <AppPage />,
+  },
+  {
+    path: "/sell-a-home",
+    element: <SellAHome />
   }
 
 ]);
