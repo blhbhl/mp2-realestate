@@ -1,49 +1,49 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./Seller.css";
 
 const Seller = () => {
+  const [propertyType, setPropertyType] = useState('');
+  const [propertyArea, setPropertyArea] = useState('');
+  const [propertyAge, setPropertyAge] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Perform actions with the form values
+    console.log('Property Type:', propertyType);
+    console.log('Property Area:', propertyArea);
+    console.log('Property Age:', propertyAge);
+  };
+
   return (
-    <section id="seller" className="se-wrapper">
-      <div className="paddings innerWidth flexCenter se-container">
-        {/* left side */}
-        <div className="se-left">
-          <div className="se-image-container">
-            <img src="./sale-1.png" alt="image" />
-          </div>
-          <span className="orangeText"><span>₱</span>190,000
-          </span>
-          <span className="primaryText">Value We Give to You</span>
 
-          <span className="secondaryText">
-            We always ready to help by providing the best services for you.
-            <br />
-            We believe a good place to live can make your life better
-          </span>
-        </div>
+    <section className="for-sale" id="sale">
+  <div id="sale" className="s-wrapper">
+  <div className="paddings innerWidth r-container">
+    <p className="orangeText">Sell A Home</p>
+    <h2 className="primaryText">Valuation Request Form</h2>
+    <div className="form">
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="propertyType">Property Type:</label>
+      <select id="propertyType" value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
+        <option value="">Select property type</option>
+        <option value="house">House</option>
+        <option value="apartment">Apartment</option>
+        <option value="condo">Condo</option>
+      </select>
 
-        {/* right */}
-        <div className="flexColStart se-right se-container">
-        <div className="se-image-container">
-            <img src="./sale-2.png" alt="image" />
-          </div>
-          <span className="orangeText">Our Value</span>
+      <label htmlFor="propertyArea">Property Area (in sqft):</label>
+      <input type="number" id="propertyArea" value={propertyArea} onChange={(e) => setPropertyArea(e.target.value)} />
 
-          <span className="primaryText">Value We Give to You</span>
+      <label htmlFor="propertyAge">Property Age:</label>
+      <input type="number" id="propertyAge" value={propertyAge} onChange={(e) => setPropertyAge(e.target.value)} />
 
-          <span className="secondaryText">
-            We always ready to help by providing the best services for you.
-            <br />
-            We believe a good place to live can make your life better
-          </span>
-        </div>
-      </div>
+      <button type="submit">Submit</button>
+    </form>
+    </div>
 
-
-
-
-
-        
-    </section>
+    </div>
+  </div>
+</section>
   );
 };
 
