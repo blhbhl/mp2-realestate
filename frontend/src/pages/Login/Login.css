@@ -37,6 +37,7 @@ rmBody h2 {
   border-radius: 4px;
   color: white;
   cursor: pointer;
+  background-color: #ffa500;
 }
 
 .login-p {

@@ -56,7 +56,7 @@ const LoginForm = () => {
             placeholder='Enter password'
           />
           {errors.password && <span className='span-red'>{errors.password}</span>}   
-        <button className='button' type="submit" >Login</button>
+        <button className="bg-red" type="submit" >Login</button>
         <p className='login-p'>Don't have an account yet? Register <Link to="/register"  className='p-link'>here</Link></p>
       </form>
     </div>
