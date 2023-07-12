@@ -10,7 +10,7 @@ const contents = [
         "room": "4",
         "bath": "3",
         "interior": "Home Theater",
-        "exterior": "Garage, Pool"
+        "exterior": "Garage & Pool"
     },
 
 

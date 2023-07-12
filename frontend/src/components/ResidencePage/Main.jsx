@@ -37,9 +37,9 @@ const Main = () => {
                         <h2 className='serbisyo1'>Other Services</h2>
                         <div>
                             <div className='serbisyo3'>
-                                <h3 className='serbisyo2'>Want to Buy?</h3>
-                                <h3 className='serbisyo2'>Want to Rent?</h3>
-                                <h3 className='serbisyo2'>Want to Sell?</h3>
+                                <h3 className='serbisyo2'>For Sale?</h3>
+                                <h3 className='serbisyo2'>For Rent?</h3>
+                                <h3 className='serbisyo2'>To Sell?</h3>
                             </div>
                             <div className='serbisyo4'>
                                 <a href="buy-a-home">

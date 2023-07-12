@@ -1,21 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./Seller.css";
 
 const Seller = () => {
-  const [propertyType, setPropertyType] = useState('');
-  const [propertyArea, setPropertyArea] = useState('');
-  const [propertyAge, setPropertyAge] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [propertyType, setPropertyType] = useState("");
+  const [propertyArea, setPropertyArea] = useState("");
+  const [propertyAge, setPropertyAge] = useState("");
+  const [additionalProperties, setAdditionalProperties] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Perform actions with the form values
-    console.log('Property Type:', propertyType);
-    console.log('Property Area:', propertyArea);
-    console.log('Property Age:', propertyAge);
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Phone Number:", phoneNumber);
+    console.log("Address:", address);
+    console.log("Property Type:", propertyType);
+    console.log("Property Area:", propertyArea);
+    console.log("Property Age:", propertyAge);
+    console.log("Additional Properties:", additionalProperties);
   };
 
   return (
-
     <section className="for-sale" id="sale">
       <div id="sale" className="s-wrapper">
         <div className="paddings innerWidth r-container">
