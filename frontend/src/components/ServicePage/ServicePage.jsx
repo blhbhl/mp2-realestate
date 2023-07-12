@@ -17,16 +17,16 @@ const ServicePage = () => {
                 </div>
                 <h3 className="card-title">
                   <a href='/buy-a-home'>Buy a home</a>
-                </h3>
+                </h3 >
                 <p className="secondaryText">
                   over 1 million+ homes for sale available on the website, we can match you with a house you will want
                   to call home.
                 </p>
-                <a href="#page" className="card-link">
+                <a href="/buy-a-home" className="card-link">
                   <span>Find A Home</span>
                 </a>
               </div>
-            </li>
+            </li >
             <li>
               <div className="service-card">
                 <div className="card-icon">
@@ -50,21 +50,21 @@ const ServicePage = () => {
                   <img src="/service-3.png" alt="Service icon" />
                 </div>
                 <h3 className="card-title">
-                  <a href="#">Sell a home</a>
+                  <a href="/sell-a-home">Sell a home</a>
                 </h3>
                 <p className="secondaryText">
                   over 1 million+ homes for sale available on the website, we can match you with a house you will want
                   to call home.
                 </p>
-                <a href="#" className="card-link">
+                <a href="/sell-a-home" className="card-link">
                   <span>Find A Home</span>
                 </a>
               </div>
             </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+          </ul >
+        </div >
+      </div >
+    </section >
 
   );
 };

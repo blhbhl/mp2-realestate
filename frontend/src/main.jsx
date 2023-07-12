@@ -5,10 +5,13 @@ import App from "./App";
 import LoginForm from "./pages/Login/LoginForm";
 import RegisterForm from "./pages/Register/RegisterForm";
 import AppPage from './components/BuyerPage/AppPage';
+import Seller from "./components/Seller/Seller";
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Main from './components/ResidencePage/Main';
 
 
 const router = createBrowserRouter([
@@ -29,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/buy-a-home",
     element: <AppPage />,
+  },
+  {
+    path: "/sell-a-home",
+    element: <Seller />,
+  },
+  {
+    path: "/residencies",
+    element: <Main />
   }
 
 ]);
