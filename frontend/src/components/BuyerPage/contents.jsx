@@ -120,8 +120,8 @@ const HousesData = [
         productType: "houseAndLot",
         description: "The contemporary modern house is a sleek and sophisticated architectural masterpiece that embodies cutting-edge design principles. Its clean lines, open floor plans, and abundant use of glass create a seamless blend between indoor and outdoor living spaces, allowing natural light to flood the interior. ",
         price: '3,000,000',
-        address: '735 Clavel Street Binondo 1000, Manila, Manila, Philippines',
-        location: '735 Clavel Street Binondo 1000, Manila, Manila, Philippines',
+        address: '735 Clavel Street Binondo, Manila, Manila, Philippines',
+        location: '735 Clavel Street Binondo, Manila, Manila, Philippines',
         bed: '4 Beds',
         bath: '3 Bathrooms',
         sqms: '1966'

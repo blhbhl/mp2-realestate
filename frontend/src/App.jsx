@@ -12,20 +12,20 @@ import ServicePage from "./components/ServicePage/ServicePage";
 
 function App() {
   return (
-      <div className="App">
-        <div>
-          <div className="white-gradient" />
-          <Header />
-          <Hero />
-        </div>
-        <Companies />
-        <Residencies />
-        <ServicePage/>
-        <Value />
-        <Contact />
-        <GetStarted />
-        <Footer />
+    <div className="App">
+      <div>
+        <div className="white-gradient" />
+        <Header />
+        <Hero />
       </div>
+      <Companies />
+      <Residencies />
+      <ServicePage />
+      <Value />
+      <Contact />
+      <GetStarted />
+      <Footer />
+    </div>
   );
 }
 

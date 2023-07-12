@@ -9,7 +9,7 @@ const BuyerPage = (props) => {
 
     const Modal = ({ setOpenModal }) => {
         return (
-            <>
+            <div>
                 <div className="overlay">
                     <div className="modalContainer">
                         <div>
@@ -77,7 +77,7 @@ const BuyerPage = (props) => {
                         </div>
                     </div >
                 </div >
-            </>
+            </div>
         )
     }
 
