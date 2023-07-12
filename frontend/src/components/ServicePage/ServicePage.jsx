@@ -12,6 +12,7 @@ const ServicePage = () => {
           <h2 className="primaryText">Our Main Focus</h2>
           <ul className="service-list">
             <li>
+              <a href='/buy-a-home'>
               <div className="service-card">
                 <div className="card-icon">
                   <img src="/service-1.png" alt="Service icon" />
@@ -27,8 +28,10 @@ const ServicePage = () => {
                   <span>Find A Home</span>
                 </Link>
               </div>
+              </a>
             </li>
             <li>
+            <a href='/rent-a-home'>
               <div className="service-card">
                 <div className="card-icon">
                   <img src="/service-2.png" alt="Service icon" />
@@ -44,8 +47,10 @@ const ServicePage = () => {
                   <span>Find A Home</span>
                 </a>
               </div>
+              </a>
             </li>
             <li>
+            <a href='/sell-a-home'>
               <div className="service-card">
                 <div className="card-icon">
                   <img src="/service-3.png" alt="Service icon" />
@@ -61,6 +66,7 @@ const ServicePage = () => {
                   <span>Find A Home</span>
                 </Link>
               </div>
+              </a>
             </li>
           </ul>
         </div>
