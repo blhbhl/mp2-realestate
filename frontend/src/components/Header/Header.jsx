@@ -3,17 +3,16 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/common";
-import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
 import LoginForm from "../../pages/Login/LoginForm";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
-  const headerColor = useHeaderColor();
+
 
 
   return (
-    <section className="h-wrapper" style={{ background: headerColor }}>
+    <section className="h-wrapper">
       <div className="flexCenter innerWidth paddings h-container">
         {/* logo */}
         <Link to="/">

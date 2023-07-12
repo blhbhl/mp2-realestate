@@ -1,5 +1,6 @@
 import React from 'react';
 import "./ServicePage.css";
+import { Link } from 'react-router-dom';
 
 const ServicePage = () => {
 
@@ -16,15 +17,15 @@ const ServicePage = () => {
                   <img src="/service-1.png" alt="Service icon" />
                 </div>
                 <h3 className="card-title">
-                  <a href="buy-a-home">Buy a home</a>
+                  <Link to={"/buy-a-home"}>Buy a home</Link>
                 </h3>
                 <p className="secondaryText">
                   over 1 million+ homes for sale available on the website, we can match you with a house you will want
                   to call home.
                 </p>
-                <a href="buy-a-home" className="card-link">
+                <Link to={"/buy-a-home"} className='card-link'>
                   <span>Find A Home</span>
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -50,15 +51,15 @@ const ServicePage = () => {
                   <img src="/service-3.png" alt="Service icon" />
                 </div>
                 <h3 className="card-title">
-                  <a href="sell-a-home">Sell a home</a>
+                  <Link to={"/sell-a-home"}>Sell a home</Link>
                 </h3>
                 <p className="secondaryText">
                   over 1 million+ homes for sale available on the website, we can match you with a house you will want
                   to call home.
                 </p>
-                <a href="sell-a-home" className="card-link">
+                <Link to={"/sell-a-home"} className="card-link">
                   <span>Find A Home</span>
-                </a>
+                </Link>
               </div>
             </li>
           </ul>

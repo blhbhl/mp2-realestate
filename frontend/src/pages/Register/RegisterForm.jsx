@@ -3,6 +3,8 @@ import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import Validation from "./RegisterValidation";
 import axios from "axios";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 
 const RegisterForm = () => {
   const [values, setValues] = useState({
@@ -34,6 +36,7 @@ const RegisterForm = () => {
 
   return (
     <div className="formBody">
+      <Header/>
       <h2>Register Here</h2>
       <form onSubmit={handleSubmit} className="register-form">
         <label htmlFor="name">Name:</label>
@@ -70,6 +73,7 @@ const RegisterForm = () => {
           </Link>
         </p>
       </form>
+      <Footer/>
     </div>
   );
 };
