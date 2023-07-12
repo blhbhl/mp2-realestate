@@ -16,13 +16,13 @@ const ServicePage = () => {
                   <img src="/service-1.png" alt="Service icon" />
                 </div>
                 <h3 className="card-title">
-                  <a href="BuyerPage">Buy a home</a>
+                  <a href='/buy-a-home'>Buy a home</a>
                 </h3>
                 <p className="secondaryText">
                   over 1 million+ homes for sale available on the website, we can match you with a house you will want
                   to call home.
                 </p>
-                <a href="#" className="card-link">
+                <a href="#page" className="card-link">
                   <span>Find A Home</span>
                 </a>
               </div>

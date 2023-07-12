@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import LoginForm from "./pages/Login/LoginForm";
 import RegisterForm from "./pages/Register/RegisterForm";
+import AppPage from './components/BuyerPage/AppPage';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,21 +14,25 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
 
   {
     path: "/login",
-    element: <LoginForm/>,
+    element: <LoginForm />,
   },
 
   {
     path: "/register",
-    element: <RegisterForm/>,
+    element: <RegisterForm />,
+  },
+  {
+    path: "/buy-a-home",
+    element: <AppPage />,
   }
 
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router}/>
+  <RouterProvider router={router} />
 );
