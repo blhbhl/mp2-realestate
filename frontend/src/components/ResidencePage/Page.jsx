@@ -11,17 +11,17 @@ const Page = (props) => {
                         <h1 className='nameHardin'>{props.name}</h1>
                         <h2 className='priceHardin'><span className='pesos'>₱</span>{props.price}</h2>
                         <h2 className='addressHardin'>{props.address}</h2>
-                        <p className='addressHardin'>{props.description}</p>
+                        <p className='describeHardin'>{props.description}</p>
                     </div>
                     <div>
                         <h1 className='detailsH'>Details</h1>
                         <div className='details'>
                             <h2 className='detailsh'>Rooms</h2>
                             <p className='detailsr'>{props.room}</p>
-                            <hr />
+                            <hr className="residences-separator" />
                             <h2 className='detailsh'>Bathrooms</h2>
                             <p className='detailsb'>{props.bath}</p>
-                            <hr />
+                            <hr className="residences-separator" />
                             <h2 className='detailsh'>Interior Amenities</h2>
                             <p className='detailsp'>{props.interior}</p>
                             <hr className="residences-separator" />

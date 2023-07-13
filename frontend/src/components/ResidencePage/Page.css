@@ -7,6 +7,7 @@
 .flex {
   display: flex;
   margin-top: 20px;
+  background-color: white;
 }
 
 .hardin {
@@ -18,29 +19,46 @@
   font-size: 40px;
   margin-top: 15px;
   color: #1f3e72;
+  font-weight: 900;
+  font-size: xx-large;
 }
 
 .priceHardin {
   color: #8c8b8b;
+  font-weight: 600;
+  font-size: x-large;
 }
 
 .addressHardin {
   color: #716f6f;
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.describeHardin {
+  color: #716f6f;
+  font-weight: 400;
+  font-size: large;
 }
 
 .detailsH {
   color: #1f3e72;
+  font-weight: 900;
+  font-size: x-large;
 }
 
 .detailsh {
   display: inline-flex;
   color: #ffa500;
+  font-weight: 900;
+  font-size: medium;
+  margin: 10px;
 }
 
 .detailsp {
   display: inline-flex;
   justify-content: space-evenly;
-  margin-left: 400px;
+  margin-left: 450px;
   color: #716f6f;
 }
 
@@ -54,7 +72,7 @@
 .detailsb {
   display: inline-flex;
   justify-content: space-evenly;
-  margin-left: 550px;
+  margin-left: 565px;
   color: #716f6f;
 }
 
@@ -74,7 +92,8 @@ hr.residences-separator {
 }
 
 .detalye {
-  border-left: #1f3e72;
+  border: #1f3e72;
+  border-right: none;
   border-style: solid;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -89,7 +108,7 @@ hr.residences-separator {
   border-bottom-right-radius: 20px;
   border-style: solid;
   padding: 40px;
-  width: 400px;
+  width: 450px;
   text-align: center;
 }
 
@@ -99,28 +118,38 @@ hr.residences-separator {
 }
 
 .serbisyo4 {
-  margin-left: -10px;
+  display: flex;
+  margin-left: 20px;
   color: #ffa500;
 }
 
 .detalye1 {
   color: #1f3e72;
+  font-weight: 900;
+  font-size: x-large;
 }
 
 .serbisyo1 {
   color: #1f3e72;
+  font-weight: 900;
+  font-size: x-large;
 }
 
 .detalye2 {
   color: #ffa500;
+  font-weight: 900;
+  font-size: large;
 }
 
 .serbisyo2 {
   color: #ffa500;
+  margin-left: 30px;
+  font-weight: 900;
+  font-size: large;
 }
 
 .agent {
-  margin-top: 50px;
+  margin-top: 25px;
   padding: 10px;
   border-radius: 10px;
   background-color: #1f3e72;
