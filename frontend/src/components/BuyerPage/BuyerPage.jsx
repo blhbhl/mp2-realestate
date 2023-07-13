@@ -127,7 +127,7 @@ const BuyerPage = (props) => {
             <div className="buttonModal">
               <div>
                 <button
-                  className="btnModal"
+                  className="btnModal outline-none"
                   onClick={() => {
                     setModalOpen(true);
                   }}
