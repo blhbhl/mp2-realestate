@@ -1,112 +1,144 @@
 import React, { useState } from "react";
 import "./Seller.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Validation from "./SellerValidation";
 
 const Seller = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [address, setAddress] = useState("");
-  const [propertyType, setPropertyType] = useState("");
-  const [propertyArea, setPropertyArea] = useState("");
-  const [propertyAge, setPropertyAge] = useState("");
-  const [additionalProperties, setAdditionalProperties] = useState("");
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    address: "",
+    propertyType: "",
+    propertyArea: "",
+    propertyAge: "",
+    additionalProperties: ""
+  });
 
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState({});
+  const handleInput = (e) => {
+    setValues(prev => ({...prev, [e.target.name]: [e.target.value]}))
+  };
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform actions with the form values
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Phone Number:", phoneNumber);
-    console.log("Address:", address);
-    console.log("Property Type:", propertyType);
-    console.log("Property Area:", propertyArea);
-    console.log("Property Age:", propertyAge);
-    console.log("Additional Properties:", additionalProperties);
-  };
-
+    
+    const err = Validation(values);
+    setErrors(err);
+    if(err.name === "" && 
+      err.email === "" && 
+      err.phoneNumber === "" &&
+      err.address === "" &&
+      err.propertyType === "" &&
+      err.propertyArea === "" &&
+      err.propertyAge === "" ) {
+      axios.post('http://localhost:3001/sell-a-home', values)
+      .then(response => {
+      if(response.data === "Failed") {
+        navigate('/');
+        alert("Submitted successfully!");
+      } else {
+          alert("Unable to submit the form!");
+      }
+    })
+    .catch(error => {
+      console.error('Error inserting seller: ', error);
+    });
+  }
+};
   return (
     <section className="for-sale" id="sale">
       <div id="sale" className="s-wrapper">
         <div className="paddings innerWidth r-container">
-          <p className="orangeText">Sell A Home</p>
+          <p className="orangeText p-marg">Sell A Home</p>
           <h2 className="primaryText">Valuation Request Form</h2>
 
           <div className="form">
             <form onSubmit={handleSubmit}>
-              <label>
-                Name:
+              <label>Name:</label>
                 <input
                   type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  name="name"
+                  onChange={handleInput}
+                  placeholder="Enter FullName"
                 />
-              </label>
+                 {errors.name && <span className="span-red">{errors.name}</span>}
+              
 
-              <label>
-                Email:
+              <label>Email:</label>
                 <input
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
+                  onChange={handleInput}
+                  placeholder="Enter Email"
                 />
-              </label>
+                  {errors.email && <span className="span-red">{errors.email}</span>}
+              
 
-              <label>
-                Phone Number:
+              <label>Phone Number:</label>
                 <input
                   type="tel"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  name="phoneNumber"
+                  onChange={handleInput}
+                  placeholder="Enter Phone Number"
                 />
-              </label>
-
-              <label>
-                Address:
+                  {errors.phoneNumber && <span className="span-red">{errors.phoneNumber}</span>}
+              
+              <label>Address:</label>
                 <input
                   type="text"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
+                  name="address"
+                  onChange={handleInput}
+                  placeholder="Enter Address"
                 />
-              </label>
-
+                 {errors.address && <span className="span-red">{errors.address}</span>}
+              
               <label htmlFor="propertyType">Property Type:</label>
               <select
                 id="propertyType"
-                value={propertyType}
-                onChange={(e) => setPropertyType(e.target.value)}
+                name="propertyType"
+                onChange={handleInput}
               >
                 <option value="">Select property type</option>
                 <option value="house">House</option>
                 <option value="apartment">Apartment</option>
                 <option value="condo">Condo</option>
               </select>
+              {errors.propertyType && <span className="span-red">{errors.propertyType}</span>}
 
               <label htmlFor="propertyArea">Property Area (in sqft):</label>
               <input
                 type="number"
+                name="propertyArea"
                 id="propertyArea"
-                value={propertyArea}
-                onChange={(e) => setPropertyArea(e.target.value)}
+                onChange={handleInput}
+                placeholder="Enter Property Area"
               />
-
+               {errors.propertyArea && <span className="span-red">{errors.propertyArea}</span>}
+              
               <label htmlFor="propertyAge">Property Age:</label>
               <input
                 type="number"
+                name="propertyAge"
                 id="propertyAge"
-                value={propertyAge}
-                onChange={(e) => setPropertyAge(e.target.value)}
+                onChange={handleInput}
+                placeholder="Enter Property Age"
               />
 
               <label className="textarea-label">
                 Additional Properties:
+              </label>
                 <textarea
                   className="textarea-input"
-                  value={additionalProperties}
-                  onChange={(e) => setAdditionalProperties(e.target.value)}
+                  name="additionalProperties"
+                  onChange={handleInput}
+                  placeholder="Enter Additional Properties"
                 ></textarea>
-              </label>
+              
 
-              <button type="submit">Submit</button>
+              <button type="submit" className="button">Submit</button>
             </form>
           </div>
         </div>

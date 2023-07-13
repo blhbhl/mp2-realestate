@@ -2,12 +2,19 @@
 .for-sale {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 1rem;
-  justify-content: center;
   align-items: center;
+  margin: 0.5rem;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+  width: 500px;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 55px;
 
 }
+
 
 .form {
   margin-top: 30px;
@@ -16,15 +23,15 @@
 
 /* Style for the form labels */
 .for-sale label {
-  margin-bottom: 0.5rem;
   font-weight: bold;
+  display: block;
+  margin-top: 20px;
 }
 
 /* Style for the form inputs */
 .for-sale input,
 .for-sale select {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+  padding: .5rem;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -32,14 +39,16 @@
 
 /* Style for the submit button */
 .for-sale button[type="submit"] {
+  width: 100%;
   padding: 0.5rem 1rem;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  display: flex;
+  display: block;
   margin-top: 30px;
+  text-align: center;
 }
 
 .for-sale button[type="submit"]:hover {
