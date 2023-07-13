@@ -14,7 +14,7 @@ function Validation(values) {
         error.email = "Email should not be empty"
     }
     else if (!email_pattern.test(values.email)) {
-        error.email = "Email didn't match"
+        error.email = "Please enter a valid email"
     }else {
         error.email = ""
     }
@@ -23,7 +23,7 @@ function Validation(values) {
         error.password = "Password should not be empty"
     }
     else if (!password_pattern.test(values.password)) {
-        error.password = "Password didn't match"
+        error.password = "Password must have atleast one uppercase letter and a number"
     } else {
         error.password = ""
     }
