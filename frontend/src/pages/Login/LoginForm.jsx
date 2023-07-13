@@ -3,6 +3,8 @@ import "./Login.css"
 import { Link, useNavigate } from "react-router-dom";
 import Validation from './LoginValidation';
 import axios from 'axios';
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 
 
 const LoginForm = () => {
@@ -38,6 +40,7 @@ const LoginForm = () => {
 
   return (
     <div className='formBody'>
+      <Header/>
       <h2>Login Here</h2>
       <form onSubmit={handleSubmit}  className='login-form'>
         <label htmlFor='email'> Email:</label>
@@ -56,9 +59,10 @@ const LoginForm = () => {
             placeholder='Enter password'
           />
           {errors.password && <span className='span-red'>{errors.password}</span>}   
-        <button className='button' type="submit" >Login</button>
+        <button className="button" type="submit" >Login</button>
         <p className='login-p'>Don't have an account yet? Register <Link to="/register"  className='p-link'>here</Link></p>
       </form>
+      <Footer/>
     </div>
   );
 };
