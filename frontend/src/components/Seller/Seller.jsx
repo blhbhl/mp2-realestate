@@ -30,51 +30,10 @@ const Seller = () => {
         <div className="paddings innerWidth r-container">
           <p className="orangeText">Sell A Home</p>
           <h2 className="primaryText">Valuation Request Form</h2>
-
           <div className="form">
             <form onSubmit={handleSubmit}>
-              <label>
-                Name:
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </label>
-
-              <label>
-                Email:
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </label>
-
-              <label>
-                Phone Number:
-                <input
-                  type="tel"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                />
-              </label>
-
-              <label>
-                Address:
-                <input
-                  type="text"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
-                />
-              </label>
-
               <label htmlFor="propertyType">Property Type:</label>
-              <select
-                id="propertyType"
-                value={propertyType}
-                onChange={(e) => setPropertyType(e.target.value)}
-              >
+              <select id="propertyType" value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
                 <option value="">Select property type</option>
                 <option value="house">House</option>
                 <option value="apartment">Apartment</option>
@@ -82,33 +41,15 @@ const Seller = () => {
               </select>
 
               <label htmlFor="propertyArea">Property Area (in sqft):</label>
-              <input
-                type="number"
-                id="propertyArea"
-                value={propertyArea}
-                onChange={(e) => setPropertyArea(e.target.value)}
-              />
+              <input type="number" id="propertyArea" value={propertyArea} onChange={(e) => setPropertyArea(e.target.value)} />
 
               <label htmlFor="propertyAge">Property Age:</label>
-              <input
-                type="number"
-                id="propertyAge"
-                value={propertyAge}
-                onChange={(e) => setPropertyAge(e.target.value)}
-              />
-
-              <label className="textarea-label">
-                Additional Properties:
-                <textarea
-                  className="textarea-input"
-                  value={additionalProperties}
-                  onChange={(e) => setAdditionalProperties(e.target.value)}
-                ></textarea>
-              </label>
+              <input type="number" id="propertyAge" value={propertyAge} onChange={(e) => setPropertyAge(e.target.value)} />
 
               <button type="submit">Submit</button>
             </form>
           </div>
+
         </div>
       </div>
     </section>

@@ -1,113 +1,73 @@
-import React, { useState, useEffect } from "react";
-import BuyerPage from "./BuyerPage";
-import contents from "./contents";
-import { BiSolidRightArrow, BiSolidLeftArrow } from "react-icons/bi";
-import { HiLocationMarker } from "react-icons/hi";
-import "./AppPage.css";
+import React from 'react';
+import "./ServicePage.css";
+import { Link } from 'react-router-dom';
 
-const AppPage = () => {
-  const [properties, setProperties] = useState(contents.slice(0, 3));
-  const [page, setPage] = useState(0);
-  const [listingPerPage, setListingPerPage] = useState(6);
-  const numOfPagination = Math.ceil(contents.length / listingPerPage);
-
-  useEffect(() => {
-    const num = page * listingPerPage;
-    setProperties(contents.slice(num, num + listingPerPage));
-  }, [page]);
-
-  const selectPage = (pageNumber) => {
-    setPage(pageNumber);
-  };
-
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
-
-  const handleSearchClick = () => {
-    console.log("Performing search for", searchQuery);
-  };
+const ServicePage = () => {
 
   return (
-    <div className="flex flex-col">
-      <div className="search-buypage">
-        <HiLocationMarker color="var(--blue)" size={25} />
-        <input type="text" value={searchQuery} onChange={handleSearchChange} />
-        <button className="button" onClick={handleSearchClick}>
-          Search
-        </button>
-      </div>
-
-      <div className="mx-auto py-12 w-fit grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-6 gap-y-8">
-        {properties.map((content) => (
-          <BuyerPage
-            key={content.id}
-            image={content.image}
-            name={content.name}
-            description={content.description}
-            price={content.price}
-            address={content.address}
-            location={content.location}
-            bed={content.bed}
-            bath={content.bath}
-            sqms={content.sqms}
-          />
-        ))}
-      </div>
-
-      <div className="w-fit mx-auto mb-8">
-        <nav aria-label="Page navigation example">
-          <ul className="ulclass">
+    <section className="service" id="service">
+      <div id="services" className="s-wrapper">
+        <div className="paddings innerWidth r-container">
+          <p className="orangeText">Our Services</p>
+          <h2 className="primaryText">Our Main Focus</h2>
+          <ul className="service-list">
             <li>
-              <button
-                className="previous"
-                onClick={() => {
-                  if (page === 0) {
-                    setPage(numOfPagination - 1);
-                  } else {
-                    setPage(page - 1);
-                  }
-                }}
-              >
-                <span className="sr-only">Previous</span>
-                <BiSolidLeftArrow className="left text-[#1F3E72] text-xl" />
-              </button>
+              <div className="service-card">
+                <div className="card-icon">
+                  <img src="/service-1.png" alt="Service icon" />
+                </div>
+                <h3 className="card-title">
+                  <Link to={"/buy-a-home"}>Buy a home</Link>
+                </h3>
+                <p className="secondaryText">
+                  over 1 million+ homes for sale available on the website, we can match you with a house you will want
+                  to call home.
+                </p>
+                <Link to={"/buy-a-home"} className='card-link'>
+                  <span>Find A Home</span>
+                </Link>
+              </div>
             </li>
-            {Array.from({ length: numOfPagination }, (_, idx) => (
-              <li key={idx}>
-                <button
-                  onClick={() => selectPage(idx)}
-                  className={
-                    "p-2 rounded-full bg-slate border mx-2 h-12 w-12 hover:bg-slate-300 " +
-                    (idx === page ? "bg-[#ffa500] text-white" : "bg-slate")
-                  }
-                >
-                  {idx + 1}
-                </button>
-              </li>
-            ))}
             <li>
-              <button
-                className="next"
-                onClick={() => {
-                  if (page === numOfPagination - 1) {
-                    setPage(0);
-                  } else {
-                    setPage(page + 1);
-                  }
-                }}
-              >
-                <span className="sr-only">Next</span>
-                <BiSolidRightArrow className="right" />
-              </button>
+              <div className="service-card">
+                <div className="card-icon">
+                  <img src="/service-2.png" alt="Service icon" />
+                </div>
+                <h3 className="card-title">
+                  <a href="#">Rent a home</a>
+                </h3>
+                <p className="secondaryText">
+                  over 1 million+ homes for sale available on the website, we can match you with a house you will want
+                  to call home.
+                </p>
+                <a href="#" className="card-link">
+                  <span>Find A Home</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div className="service-card">
+                <div className="card-icon">
+                  <img src="/service-3.png" alt="Service icon" />
+                </div>
+                <h3 className="card-title">
+                  <Link to={"/sell-a-home"}>Sell a home</Link>
+                </h3>
+                <p className="secondaryText">
+                  over 1 million+ homes for sale available on the website, we can match you with a house you will want
+                  to call home.
+                </p>
+                <Link to={"/sell-a-home"} className="card-link">
+                  <span>Find A Home</span>
+                </Link>
+              </div>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
-    </div>
+    </section>
+
   );
 };
 
-export default AppPage;
+export default ServicePage;

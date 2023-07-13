@@ -1,0 +1,147 @@
+.r1 {
+  width: 600px;
+  border-radius: -30px;
+  margin: 10px;
+}
+
+.flex {
+  display: flex;
+  margin-top: 20px;
+}
+
+.hardin {
+  margin-top: 30px;
+  margin: 2px;
+}
+
+.nameHardin {
+  font-size: 40px;
+  margin-top: 15px;
+  color: #1f3e72;
+}
+
+.priceHardin {
+  color: #8c8b8b;
+}
+
+.addressHardin {
+  color: #716f6f;
+}
+
+.detailsH {
+  color: #1f3e72;
+}
+
+.detailsh {
+  display: inline-flex;
+  color: #ffa500;
+}
+
+.detailsp {
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin-left: 400px;
+  color: #716f6f;
+}
+
+.detailsr {
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin-left: 600px;
+  color: #716f6f;
+}
+
+.detailsb {
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin-left: 550px;
+  color: #716f6f;
+}
+
+hr {
+  height: 2px;
+  width: 740px;
+  background-color: #716f6f;
+}
+
+.container {
+  margin-top: -50px;
+}
+
+.detailContainer {
+  display: inline-flex;
+  color: #716f6f;
+}
+
+.detalye {
+  border-left: #1f3e72;
+  border-style: solid;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 40px;
+  width: 400px;
+  text-align: center;
+}
+
+.serbisyo {
+  border: #1f3e72;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-style: solid;
+  padding: 40px;
+  width: 400px;
+  text-align: center;
+}
+
+.serbisyo3 {
+  display: flex;
+  color: #ffa500;
+}
+
+.serbisyo4 {
+  margin-left: -10px;
+  color: #ffa500;
+}
+
+.detalye1 {
+  color: #1f3e72;
+}
+
+.serbisyo1 {
+  color: #1f3e72;
+}
+
+.detalye2 {
+  color: #ffa500;
+}
+
+.serbisyo2 {
+  color: #ffa500;
+}
+
+.agent {
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1f3e72;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.serviceBtn {
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 25px;
+  background-color: #1f3e72;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.middle {
+  width: 1325px;
+  margin: 21px;
+}

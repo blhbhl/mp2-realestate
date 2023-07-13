@@ -4,30 +4,31 @@ import "./index.css";
 import App from "./App";
 import LoginForm from "./pages/Login/LoginForm";
 import RegisterForm from "./pages/Register/RegisterForm";
+import AppPage from './components/BuyerPage/AppPage';
+import Seller from "./components/Seller/Seller";
+import Main from './components/ResidencePage/Main';
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import AppPage from "./components/BuyerPage/AppPage";
-import SellAHome from "./pages/SellAHome/SellAHome";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
 
   {
     path: "/login",
-    element: <LoginForm/>,
+    element: <LoginForm />,
   },
 
   {
     path: "/register",
-    element: <RegisterForm/>,
-  }, 
-
+    element: <RegisterForm />,
+  },
   {
     path: "/buy-a-home",
     element: <AppPage />,
@@ -35,10 +36,14 @@ const router = createBrowserRouter([
 
   {
     path: "/sell-a-home",
-    element: <SellAHome />
+    element: <Seller />,
+  },
+  {
+    path: "/residencies",
+    element: <Main />
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router}/>
+  <RouterProvider router={router} />
 );
