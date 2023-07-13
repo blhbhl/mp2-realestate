@@ -12,6 +12,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import SellAHome from "./pages/SellAHome/SellAHome";
 
 
 const router = createBrowserRouter([
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
 
   {
     path: "/sell-a-home",
-    element: <Seller />,
+    element: <SellAHome />,
   },
   {
     path: "/residencies",
