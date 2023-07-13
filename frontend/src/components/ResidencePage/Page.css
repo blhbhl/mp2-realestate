@@ -58,7 +58,7 @@
   color: #716f6f;
 }
 
-hr {
+hr.residences-separator {
   height: 2px;
   width: 740px;
   background-color: #716f6f;

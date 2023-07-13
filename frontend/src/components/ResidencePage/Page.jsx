@@ -24,7 +24,7 @@ const Page = (props) => {
                             <hr />
                             <h2 className='detailsh'>Interior Amenities</h2>
                             <p className='detailsp'>{props.interior}</p>
-                            <hr />
+                            <hr className="residences-separator" />
                             <h2 className='detailsh'>Exterior Amenities</h2>
                             <p className='detailsp'>{props.exterior}</p>
                         </div>
