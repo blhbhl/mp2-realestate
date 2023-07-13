@@ -4,6 +4,7 @@ import contents from "./contents";
 import { BiSolidRightArrow, BiSolidLeftArrow } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
 import "./AppPage.css";
+import Header from "../Header/Header";
 
 const AppPage = () => {
   const [properties, setProperties] = useState(contents.slice(0, 3));
@@ -30,7 +31,8 @@ const AppPage = () => {
     console.log("Performing search for", searchQuery);
   };
 
-  return (
+  return ( <>
+    <Header />  
     <div className="flex flex-col">
       <div className="search-buypage">
         <HiLocationMarker color="var(--blue)" size={25} />
@@ -107,6 +109,7 @@ const AppPage = () => {
         </nav>
       </div>
     </div>
+    </>
   );
 };
 
