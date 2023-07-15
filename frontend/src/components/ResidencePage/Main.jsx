@@ -38,15 +38,11 @@ const Main = () => {
                         <div>
                             <div className='serbisyo3'>
                                 <h3 className='serbisyo2'>For Sale?</h3>
-                                <h3 className='serbisyo2'>For Rent?</h3>
                                 <h3 className='serbisyo2'>To Sell?</h3>
                             </div>
                             <div className='serbisyo4'>
                                 <a href="buy-a-home">
                                     <button className='serviceBtn'>Buy Here</button>
-                                </a>
-                                <a href="">
-                                    <button className='serviceBtn'>Rent Here</button>
                                 </a>
                                 <a href="sell-a-home">
                                     <button className='serviceBtn'>Sell Here</button>

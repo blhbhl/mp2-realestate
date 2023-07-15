@@ -25,7 +25,7 @@ const BuyerPage = (props) => {
                         <div className="describe1">
                           <h2 className="title-name">Description</h2>
                           <hr className="line" />
-                          <p>{props.description}</p>
+                          <p className='description'>{props.description}</p>
                         </div>
                         <div>
                           <h2 className="title-location">Location</h2>
@@ -62,7 +62,7 @@ const BuyerPage = (props) => {
                     </div>
                   </div>
                   <div className="main">
-                    <img className="img" alt="hero" src={props.image} />
+                    <img className="image" src={props.image} />
                   </div>
                 </div>
               </section>
