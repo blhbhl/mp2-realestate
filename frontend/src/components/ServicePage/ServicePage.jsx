@@ -30,28 +30,10 @@ const ServicePage = () => {
               </div>
               </a>
             </li>
-            <li>
-            <a href='/rent-a-home'>
-              <div className="service-card">
-                <div className="card-icon">
-                  <img src="/service-2.png" alt="Service icon" />
-                </div>
-                <h3 className="card-title">
-                  <a href="#">Rent a home</a>
-                </h3>
-                <p className="secondaryText">
-                  over 1 million+ homes for sale available on the website, we can match you with a house you will want
-                  to call home.
-                </p>
-                <a href="#" className="card-link">
-                  <span>Find A Home</span>
-                </a>
-              </div>
-              </a>
-            </li>
+           
             <li>
             <a href='/sell-a-home'>
-              <div className="service-card">
+              <div className="service-card card2 ">
                 <div className="card-icon">
                   <img src="/service-3.png" alt="Service icon" />
                 </div>
