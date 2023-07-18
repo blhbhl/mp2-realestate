@@ -42,18 +42,18 @@ const Seller = () => {
       err.propertyArea === "" &&
       err.propertyAge === ""
     ) {
-      const formData = new FormData();
-      formData.append("image", values.image); // Append the image to the form data
+      // const formData = new FormData();
+      // formData.append("image", values.image); // Append the image to the form data
 
-      // Append other form values to the form data
-      for (const key in values) {
-        if (key !== "image") {
-          formData.append(key, values[key]);
-        }
-      }
+      // // Append other form values to the form data
+      // for (const key in values) {
+      //   if (key !== "image") {
+      //     formData.append(key, values[key]);
+      //   }
+      // }
 
       axios
-        .post("http://localhost:3001/sell-a-home", formData)
+        .post("http://localhost:3001/sell-a-home", values)
         .then((response) => {
           if (response.data === "Failed") {
             navigate("/");
