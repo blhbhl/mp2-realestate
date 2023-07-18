@@ -125,6 +125,20 @@ app.get('/logout', (req, res) => {
 })
 
 
+app.get('/properties', (req, res) => {
+    const sql = "SELECT * FROM seller_page WHERE `address` LIKE ?";
+    db.query(sql, [!!req.query.search ? `%${req.query.search}%` : "%%"], (err, data) => {
+        console.error(err)
+        if(err) return res.json({Message: "Server side Error!"});
+        if(data.length > 0) {
+            return res.json({data})
+        } else {
+            return res.json({Message: "No records existed!"});
+        }
+    })
+})
+
+
 app.post('/upload', upload.any(), (req, res) => {
   // Access the uploaded file(s) information through req.files
   console.log('Uploaded files:', req.files);

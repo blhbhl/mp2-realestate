@@ -6,6 +6,7 @@ import "./BuyerPage.css";
 const BuyerPage = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  console.log
 
   const Modal = ({ setOpenModal }) => {
     return (
@@ -62,7 +63,7 @@ const BuyerPage = (props) => {
                     </div>
                   </div>
                   <div className="main">
-                    <img className="image" src={props.image} />
+                    <img className="image" src={`http://localhost:3001/uploads/${props.imageFilename}`} />
                   </div>
                 </div>
               </section>
@@ -86,7 +87,7 @@ const BuyerPage = (props) => {
 
   return (
     <div className="flex flex-col mx-auto">
-      <img className="img1" src={props.image} />
+      <img className="img1"  src={`http://localhost:3001/uploads/${props.imageFilename}`}  />
       <div key={props.id} className="id">
         <div className="card">
           <div className="icons">

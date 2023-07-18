@@ -30,6 +30,7 @@ const Seller = () => {
     propertyType: "",
     propertyArea: "",
     propertyAge: "",
+    // propertyName: "",
     additionalProperties: "",
     image: null // Add image property to the state
   });
@@ -57,6 +58,7 @@ const Seller = () => {
       err.address === "" &&
       err.propertyType === "" &&
       err.propertyArea === "" &&
+      // err.propertyName === "" &&
       err.propertyAge === ""
     ) {
       // const formData = new FormData();
