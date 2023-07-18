@@ -6,8 +6,7 @@ import "./BuyerPage.css";
 const BuyerPage = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  console.log
-
+  console.log(props)
   const Modal = ({ setOpenModal }) => {
     return (
       <div>
@@ -26,7 +25,7 @@ const BuyerPage = (props) => {
                         <div className="describe1">
                           <h2 className="title-name">Description</h2>
                           <hr className="line" />
-                          <p className='description'>{props.description}</p>
+                          <p className='description'>{props.additionalDetails}</p>
                         </div>
                         <div>
                           <h2 className="title-location">Location</h2>

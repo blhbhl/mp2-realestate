@@ -61,21 +61,7 @@ const Seller = () => {
       // err.propertyName === "" &&
       err.propertyAge === ""
     ) {
-      // const formData = new FormData();
-      // formData.append("image", values.image); // Append the image to the form data
-
-      // // Append other form values to the form data
-      // for (const key in values) {
-      //   if (key !== "image") {
-      //     formData.append(key, values[key]);
-      //   }
-      // }
-      const file = event.target;
-
-      console.log(values.image)
-
       uploadImage(values.image, (imageUploadResult) => {
-        console.log('image upload result', imageUploadResult);
         const valuesToSendToBackend = {
           ...values,
           image: imageUploadResult.filename
@@ -84,7 +70,6 @@ const Seller = () => {
         axios
           .post("http://localhost:3001/sell-a-home", valuesToSendToBackend)
           .then((response) => {
-            console.log(response.status)
             if (response.status === 201) {
               // navigate("/);
               alert("Submitted successfully!");

@@ -26,7 +26,6 @@ const AppPage = () => {
     axios
       .get("http://localhost:3001/properties")
       .then((res) => {
-        console.log("Result", res.data.data);
 
         if (!!res.data.data) {
           setContents(res.data.data);
@@ -46,11 +45,9 @@ const AppPage = () => {
     axios
       .get("http://localhost:3001/properties" + q)
       .then((res) => {
-        console.log("res", res.data.data);
         if (!!res.data.data) {
           setContents(res.data.data);
         } else {
-          console.log("contents should be empty");
           setContents([]);
         }
       })
@@ -84,6 +81,7 @@ const AppPage = () => {
       <div className="flex flex-col">
         <div className="search-buypage">
           <HiLocationMarker color="var(--blue)" size={25} />
+        
           <input
             className="w-full outline-none py-2 ml-2"
             type="text"
@@ -109,6 +107,7 @@ const AppPage = () => {
                 bed={content.bed}
                 bath={content.bath}
                 sqms={content.sqms}
+                additionalDetails={content.additional_properties}
               />
             ))
           ) : (
