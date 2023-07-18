@@ -18,7 +18,8 @@ const LoginForm = () => {
   const handleInput = (e) => {
     setValues(prev => ({...prev, [e.target.name]: [e.target.value]}))
   }
-
+  
+  axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
     const err = Validation(values);
@@ -26,10 +27,10 @@ const LoginForm = () => {
     if(err.email === "" && err.password === "") {
       axios.post('http://localhost:3001/login', values)
       .then(res => {
-        if(res.data === "Success") {
+        if(res.data.Status === "Success") {
           navigate('/');
         } else {
-            alert("No record existed");
+            alert(res.data.Message);
         }
       })
       .catch(err => console.log(err));

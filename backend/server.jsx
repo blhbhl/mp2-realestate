@@ -1,16 +1,44 @@
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
 
 const app = express();
-app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
+app.use(cors(
+    {
+        origin: ["http://localhost:5173"],
+        methods: ["POST, GET"],
+        credentials: true
+    }
+));
 
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: "",
     database: 'homyz_db'
+})
+
+const verifyUser = (req, res, next) => {
+    const token = req.cookies.token;
+    if(!token) {
+        return res.json({Message: "We need token plase login"})
+    } else {
+        jwt.verify(token, "homyz-secret-key", (err) => {
+            if(err) {
+                return res.json({Message: "Authentication failed"})
+            } else {
+                next();
+            }
+        })
+    }
+}
+
+app.get('/', verifyUser, (req, res) => {
+    return res.json({Status: "Success"})
 })
 
 app.post('/register', (req, res) => {
@@ -31,13 +59,14 @@ app.post('/register', (req, res) => {
 app.post('/login', (req, res) => {
     const sql = "SELECT * FROM login_register WHERE `email` = ? AND `password` = ?";
     db.query(sql, [req.body.email, req.body.password ], (err, data) => {
-        if(err) {
-            return res.json("Error");
-        }
+        if(err) return res.json({Message: "Server side Error!"});
         if(data.length > 0) {
-            return res.json("Success");
+            const name = data[0].name;
+            const token = jwt.sign({name}, "homyz-secret-key", {expiresIn: '1d'});
+            res.cookie('token', token);
+            return res.json({Status: "Success"})
         } else {
-            return res.json("Failed");
+            return res.json({Message: "No records existed!"});
         }
     })
 })
@@ -64,6 +93,11 @@ app.post('/sell-a-home', (req, res) => {
             return res.json("Failed");
         }
     })
+})
+
+app.get('/logout', (req, res) => {
+    res.clearCookie('token');
+    return res.json({Status: 'Success'})
 })
 
 app.listen(3001, () => {
