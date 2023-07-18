@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Validation from "./SellerValidation";
 
 const Seller = () => {
-
+  const [isSuccess, setIsSuccess] = useState(false);
   function uploadImage(file, callback, error) {
     const formData = new FormData();
     formData.append('image', file);
@@ -82,11 +82,14 @@ const Seller = () => {
         axios
           .post("http://localhost:3001/sell-a-home", valuesToSendToBackend)
           .then((response) => {
-            if (response.data === "Failed") {
-              navigate("/");
+            console.log(response.status)
+            if (response.status === 201) {
+              // navigate("/);
               alert("Submitted successfully!");
+              setIsSuccess(true);
             } else {
               alert("Unable to submit the form!");
+              setIsSuccess(false);
             }
           })
           .catch((error) => {
@@ -105,8 +108,9 @@ const Seller = () => {
         <div className="paddings innercd Width r-container">
           <p className="orangeText p-marg">Sell A Home</p>
           <h2 className="primaryText">Valuation Request Form</h2>
-
-          <div className="form">
+          {
+            isSuccess ? <h1> Success! </h1> : (
+            <div className="form">
             <form onSubmit={handleSubmit} autoComplete="on">
               <label>Name:</label>
               <input
@@ -207,6 +211,10 @@ const Seller = () => {
               </button>
             </form>
           </div>
+            )
+          }
+
+        
         </div>
       </div>
     </section>

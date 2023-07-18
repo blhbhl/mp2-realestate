@@ -108,8 +108,11 @@ app.post('/sell-a-home', (req, res) => {
             console.error(err)
             return res.status(500).json("Error");
         }
-        if(data.length > 0) {
-            return res.json("Success");
+
+        console.log('data', data);
+
+        if(data.affectedRows > 0) {
+            return res.status(201).json("Success");
         } else {
             return res.status(500).json("Failed");
         }
