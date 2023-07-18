@@ -5,6 +5,23 @@ import { useNavigate } from "react-router-dom";
 import Validation from "./SellerValidation";
 
 const Seller = () => {
+
+  function uploadImage(file, callback, error) {
+    const formData = new FormData();
+    formData.append('image', file);
+  
+    axios.post('http://localhost:3001/upload', formData)
+      .then(response => {
+        console.log('File uploaded successfully:', response.data);
+        callback(response.data)
+      })
+      .catch(e => {
+        console.error('Error uploading file:', e);
+        error(e);
+      });
+  } 
+
+
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -51,20 +68,34 @@ const Seller = () => {
       //     formData.append(key, values[key]);
       //   }
       // }
+      const file = event.target;
 
-      axios
-        .post("http://localhost:3001/sell-a-home", values)
-        .then((response) => {
-          if (response.data === "Failed") {
-            navigate("/");
-            alert("Submitted successfully!");
-          } else {
-            alert("Unable to submit the form!");
-          }
-        })
-        .catch((error) => {
-          console.error("Error inserting seller: ", error);
-        });
+      console.log(values.image)
+
+      uploadImage(values.image, (imageUploadResult) => {
+        console.log('image upload result', imageUploadResult);
+        const valuesToSendToBackend = {
+          ...values,
+          image: imageUploadResult.filename
+        }
+
+        axios
+          .post("http://localhost:3001/sell-a-home", valuesToSendToBackend)
+          .then((response) => {
+            if (response.data === "Failed") {
+              navigate("/");
+              alert("Submitted successfully!");
+            } else {
+              alert("Unable to submit the form!");
+            }
+          })
+          .catch((error) => {
+            console.error("Error inserting seller: ", error);
+          });
+      }, err => {
+        console.error(err)
+      })
+
     }
   };
 
@@ -76,7 +107,7 @@ const Seller = () => {
           <h2 className="primaryText">Valuation Request Form</h2>
 
           <div className="form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} autoComplete="on">
               <label>Name:</label>
               <input
                 type="text"

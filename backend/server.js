@@ -3,6 +3,8 @@ const mysql = require('mysql');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
+const multer = require('multer');
+const crypto = require('crypto');
 
 const app = express();
 app.use(express.json());
@@ -14,6 +16,21 @@ app.use(cors(
         credentials: true
     }
 ));
+
+app.use('/uploads', express.static('uploads'));
+
+const storage = multer.diskStorage({
+    destination: 'uploads/', // Folder to store the uploaded files
+    filename: (req, file, cb) => {
+      // Generate a unique filename using cryptographic hash
+      crypto.randomBytes(16, (err, raw) => {
+        if (err) return cb(err);
+        cb(null, raw.toString('hex') + Date.now() + '.' + file.originalname.split('.').pop());
+      });
+    }
+  });
+  
+const upload = multer({ storage });
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -72,7 +89,7 @@ app.post('/login', (req, res) => {
 })
 
 app.post('/sell-a-home', (req, res) => {
-    const sql = "INSERT INTO seller_page (`name`, `email`, `phone_number`, `address`, `property_type`, `property_area`, `property_age`, `additional_properties`) VALUES (?)";
+    const sql = "INSERT INTO seller_page (`name`, `email`, `phone_number`, `address`, `property_type`, `property_area`, `property_age`, `additional_properties`, `image_filename`) VALUES (?)";
     const values = [
         req.body.name,
         req.body.email,
@@ -81,7 +98,8 @@ app.post('/sell-a-home', (req, res) => {
         req.body.propertyType,
         req.body.propertyArea,
         req.body.propertyAge,
-        req.body.additionalProperties
+        req.body.additionalProperties,
+        req.body.image,
     ]
 
     console.log('request body' ,req.body)
@@ -102,6 +120,23 @@ app.get('/logout', (req, res) => {
     res.clearCookie('token');
     return res.json({Status: 'Success'})
 })
+
+
+app.post('/upload', upload.any(), (req, res) => {
+  // Access the uploaded file(s) information through req.files
+  console.log('Uploaded files:', req.files);
+
+  // Access other form data fields using req.body
+  console.log('Form data:', req.body);
+
+  // Save the file information and other form data in the database
+  // You can use your preferred database library here
+
+  res.json({
+    message: 'Image uploaded',
+    filename: req.files[0].filename
+  });
+});
 
 app.listen(3001, () => {
     console.log("Port running on port 3001");
