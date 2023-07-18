@@ -102,14 +102,11 @@ app.post('/sell-a-home', (req, res) => {
         req.body.image,
     ]
 
-    console.log('request body' ,req.body)
     db.query(sql, [values], (err, data) => {
         if(err) {
             console.error(err)
             return res.status(500).json("Error");
         }
-
-        console.log('data', data);
 
         if(data.affectedRows > 0) {
             return res.status(201).json("Success");
