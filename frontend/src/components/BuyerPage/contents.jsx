@@ -98,33 +98,33 @@ const HousesData = [
         bath: '3 Bathrooms',
         sqms: '1966'
     },
-    // {
-    //     id: 8,
-    //     name: 'The Hampton',
-    //     image:
-    //         'https://i.pinimg.com/564x/7e/4f/43/7e4f43137b61c20e004aab9b57874151.jpg',
-    //     productType: "houseAndLot",
-    //     description: "The contemporary modern house is a sleek and sophisticated architectural masterpiece that embodies cutting-edge design principles. Its clean lines, open floor plans, and abundant use of glass create a seamless blend between indoor and outdoor living spaces, allowing natural light to flood the interior. ",
-    //     price: '1,500,000',
-    //     address: '429 Claveria Street, Makati City, Metro Manila, Philippines',
-    //     location: '429 Claveria Street, Makati City, Metro Manila, Philippines',
-    //     bed: '3 Beds',
-    //     bath: '3 Bathrooms',
-    //     sqms: '1966',
-    // },
-    // {
-    //     id: 9,
-    //     name: 'The Brookhaven',
-    //     image:
-    //         'https://i.pinimg.com/564x/6c/6c/d0/6c6cd02306edd8edc1e8f249f1a9a872.jpg',
-    //     productType: "houseAndLot",
-    //     description: "The contemporary modern house is a sleek and sophisticated architectural masterpiece that embodies cutting-edge design principles. Its clean lines, open floor plans, and abundant use of glass create a seamless blend between indoor and outdoor living spaces, allowing natural light to flood the interior. ",
-    //     price: '3,000,000',
-    //     address: '735 Clavel Street Binondo, Manila, Manila, Philippines',
-    //     location: '735 Clavel Street Binondo, Manila, Manila, Philippines',
-    //     bed: '4 Beds',
-    //     bath: '3 Bathrooms',
-    //     sqms: '1966'
-    // },
+    {
+        id: 8,
+        name: 'The Hampton',
+        image:
+            'https://i.pinimg.com/564x/7e/4f/43/7e4f43137b61c20e004aab9b57874151.jpg',
+        productType: "houseAndLot",
+        description: "The contemporary modern house is a sleek and sophisticated architectural masterpiece that embodies cutting-edge design principles. Its clean lines, open floor plans, and abundant use of glass create a seamless blend between indoor and outdoor living spaces, allowing natural light to flood the interior. ",
+        price: '1,500,000',
+        address: '429 Claveria Street, Makati City, Metro Manila, Philippines',
+        location: '429 Claveria Street, Makati City, Metro Manila, Philippines',
+        bed: '3 Beds',
+        bath: '3 Bathrooms',
+        sqms: '1966',
+    },
+    {
+        id: 9,
+        name: 'The Brookhaven',
+        image:
+            'https://i.pinimg.com/564x/6c/6c/d0/6c6cd02306edd8edc1e8f249f1a9a872.jpg',
+        productType: "houseAndLot",
+        description: "The contemporary modern house is a sleek and sophisticated architectural masterpiece that embodies cutting-edge design principles. Its clean lines, open floor plans, and abundant use of glass create a seamless blend between indoor and outdoor living spaces, allowing natural light to flood the interior. ",
+        price: '3,000,000',
+        address: '735 Clavel Street Binondo, Manila, Manila, Philippines',
+        location: '735 Clavel Street Binondo, Manila, Manila, Philippines',
+        bed: '4 Beds',
+        bath: '3 Bathrooms',
+        sqms: '1966'
+    },
 ];
 export default HousesData;
