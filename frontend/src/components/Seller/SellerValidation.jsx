@@ -24,6 +24,12 @@ function Validation(values) {
         error.phoneNumber = ""
     }
 
+    if (values.propertyName === "") {
+        error.propertyName = "Property Name is required"
+    } else {
+        error.propertyName = ""
+    }
+
     if (values.address === "") {
         error.address = "Address is required"
     } else {
@@ -46,6 +52,18 @@ function Validation(values) {
         error.propertyAge = "Property age is required"
     } else { 
         error.propertyAge = ""
+    }
+
+    if (values.bedroom === "") {
+        error.bedroom = "Bedroom is required"
+    } else { 
+        error.bedroom = ""
+    }
+
+    if (values.bathroom === "") {
+        error.bathroom = "Property age is required"
+    } else { 
+        error.bathroom = ""
     }
     return error;
 }
