@@ -13,14 +13,18 @@ CREATE TABLE `seller_page` (
   `name` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
   `phone_number` varchar(25) NOT NULL,
-  `address` varchar(100) NOT NULL,
+  `property_name` varchar(50) NOT NULL,
+  `address` varchar(1000) NOT NULL,
   `property_type` enum('House','Apartment','Condo') DEFAULT NULL,
   `property_area` int(11) NOT NULL,
   `property_age` int(11) NOT NULL,
+  `bedroom` int(20) NOT NULL,
+  `bathroom` int(20) NOT NULL,
   `additional_properties` text NOT NULL,
+  `price` int(11) NOT NULL,
   `image_filename` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 ```
 
