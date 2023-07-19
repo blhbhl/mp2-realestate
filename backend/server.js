@@ -89,17 +89,21 @@ app.post('/login', (req, res) => {
 })
 
 app.post('/sell-a-home', (req, res) => {
-    const sql = "INSERT INTO seller_page (`name`, `email`, `phone_number`, `address`, `property_type`, `property_area`, `property_age`, `additional_properties`, `image_filename`) VALUES (?)";
+    const sql = "INSERT INTO seller_page (`name`, `email`, `phone_number`, `property_name`, `address`, `property_type`, `property_area`, `property_age`, `bedroom`, `bathroom`, `additional_properties`, `price`, `image_filename`) VALUES (?)";
     const values = [
         req.body.name,
         req.body.email,
         req.body.phoneNumber,
+        req.body.propertyName,
         req.body.address,
         req.body.propertyType,
         req.body.propertyArea,
         req.body.propertyAge,
+        req.body.bedroom,
+        req.body.bathroom,
         req.body.additionalProperties,
-        req.body.image,
+        req.body.price,
+        req.body.image
     ]
 
     db.query(sql, [values], (err, data) => {
