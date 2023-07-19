@@ -33,6 +33,7 @@
       bedroom: "",
       bathroom: "",
       propertyAge: "",
+      price: "",
       additionalProperties: "",
       image: null, // Add image property to the state
     });
@@ -62,6 +63,7 @@
         err.address === "" &&
         err.propertyType === "" &&
         err.propertyArea === "" &&
+        err.price === "" &&
         err.bedroom === "" &&
         err.bathroom === "" &&
         err.propertyAge === ""
@@ -223,6 +225,19 @@
 
                   {errors.propertyAge && (
                     <span className="span-red">{errors.propertAge}</span>
+                  )}
+
+                  <label htmlFor="price">Price:</label>
+                  <input
+                    type="number"
+                    name="price"
+                    id="price"
+                    onChange={handleInput}
+                    placeholder="Enter Price"
+                  />
+
+                  {errors.price && (
+                    <span className="span-red">{errors.price}</span>
                   )}
 
                   <label className="textarea-label">Additional Properties:</label>

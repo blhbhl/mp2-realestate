@@ -65,6 +65,15 @@ function Validation(values) {
     } else { 
         error.bathroom = ""
     }
+
+    console.log(values);
+
+    if (values.price === "") {
+        error.price = "Property price is required"
+    } else { 
+        error.price = ""
+    }
+
     return error;
 }
 

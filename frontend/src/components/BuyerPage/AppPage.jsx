@@ -39,12 +39,12 @@ const AppPage = () => {
   }, []);
 
   useEffect(() => {
-    // Fetch all the properties from DB
-    let q = `?search=${searchQuery}`;
 
-    axios
-      .get("http://localhost:3001/properties" + q)
+    if (searchQuery === "")  {
+      axios
+      .get("http://localhost:3001/properties")
       .then((res) => {
+
         if (!!res.data.data) {
           setContents(res.data.data);
         } else {
@@ -54,6 +54,8 @@ const AppPage = () => {
       .catch((err) => {
         console.error(err);
       });
+    }
+
   }, [searchQuery]);
 
   useEffect(() => {
@@ -73,6 +75,22 @@ const AppPage = () => {
 
   const handleSearchClick = () => {
     console.log("Performing search for", searchQuery);
+
+        // Fetch all the properties from DB
+        let q = `?search=${searchQuery}`;
+
+        axios
+          .get("http://localhost:3001/properties" + q)
+          .then((res) => {
+            if (!!res.data.data) {
+              setContents(res.data.data);
+            } else {
+              setContents([]);
+            }
+          })
+          .catch((err) => {
+            console.error(err);
+          });
   };
 
   return (
@@ -99,14 +117,14 @@ const AppPage = () => {
               <BuyerPage
                 key={content.id}
                 imageFilename={content.image_filename}
-                name={content.name}
+                name={content.property_name}
                 description={content.description}
                 price={content.price}
                 address={content.address}
                 location={content.location}
-                bed={content.bed}
-                bath={content.bath}
-                sqms={content.sqms}
+                bed={content.bedroom}
+                bath={content.bathroom}
+                sqms={content.property_area}
                 additionalDetails={content.additional_properties}
               />
             ))
