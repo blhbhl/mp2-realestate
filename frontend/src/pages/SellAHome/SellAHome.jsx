@@ -6,7 +6,6 @@ import Seller from "../../components/Seller/Seller";
 const SellAHome = () => {
     return (
         <div>
-            <Header />
             <Seller />
             <Footer />
         </div>

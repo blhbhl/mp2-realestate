@@ -2,10 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import LoginForm from "./pages/Login/LoginForm";
-import RegisterForm from "./pages/Register/RegisterForm";
 import AppPage from './components/BuyerPage/AppPage';
-import Seller from "./components/Seller/Seller";
 import Main from './components/ResidencePage/Main';
 
 import {
@@ -13,6 +10,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import SellAHome from "./pages/SellAHome/SellAHome";
+import RegisterPage from "./pages/Register/RegisterPage";
+import LoginPage from "./pages/Login/LoginPage";
 
 
 const router = createBrowserRouter([
@@ -23,12 +22,12 @@ const router = createBrowserRouter([
 
   {
     path: "/login",
-    element: <LoginForm />,
+    element: <LoginPage />,
   },
 
   {
     path: "/register",
-    element: <RegisterForm />,
+    element: <RegisterPage />,
   },
   {
     path: "/buy-a-home",

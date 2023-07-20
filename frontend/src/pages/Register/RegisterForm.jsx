@@ -36,7 +36,9 @@ const RegisterForm = () => {
 
   return (
     <div className="formBody">
-      <Header/>
+      <Link to={"/"}>
+      <button className='home-button button'>Go Back Home</button>
+      </Link>
       <h2>Register Here</h2>
       <form onSubmit={handleSubmit} className="register-form">
         <label htmlFor="name">Name:</label>
@@ -47,6 +49,7 @@ const RegisterForm = () => {
           placeholder="Enter Fullname"
         />
         {errors.name && <span className="span-red">{errors.name}</span>}
+        
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -55,6 +58,7 @@ const RegisterForm = () => {
           placeholder="Enter Email"
         />
         {errors.email && <span className="span-red">{errors.email}</span>}
+        
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -63,6 +67,7 @@ const RegisterForm = () => {
           placeholder="Enter password"
         />
         {errors.password && <span className="span-red">{errors.password}</span>}
+        
         <button type="submit" className="button">
           Register
         </button>
@@ -73,7 +78,6 @@ const RegisterForm = () => {
           </Link>
         </p>
       </form>
-      <Footer/>
     </div>
   );
 };

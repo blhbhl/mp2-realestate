@@ -1,7 +1,7 @@
   import React, { useState } from "react";
   import "./Seller.css";
   import axios from "axios";
-  import { useNavigate } from "react-router-dom";
+  import { useNavigate, Link } from "react-router-dom";
   import Validation from "./SellerValidation";
 
   const Seller = () => {
@@ -101,6 +101,9 @@
 
     return (
       <section className="for-sale" id="sale">
+        <Link to={"/"}>
+        <button className='home-button'>Go Back Home</button>
+        </Link>
         <div id="sale" className="s-wrapper">
           <div className="paddings innercd Width r-container">
             <p className="orangeText p-marg">Sell A Home</p>
@@ -130,7 +133,7 @@
                     <span className="span-red">{errors.email}</span>
                   )}
 
-                  <label>Propperty Name:</label>
+                  <label>Property Name:</label>
                   <input
                     type="prop"
                     name="propertyName"

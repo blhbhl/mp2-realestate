@@ -3,9 +3,6 @@ import "./Login.css"
 import { Link, useNavigate } from "react-router-dom";
 import Validation from './LoginValidation';
 import axios from 'axios';
-import Footer from '../../components/Footer/Footer';
-import Header from '../../components/Header/Header';
-
 
 const LoginForm = () => {
   const [values, setValues] = useState({
@@ -41,7 +38,9 @@ const LoginForm = () => {
 
   return (
     <div className='formBody'>
-      <Header/>
+      <Link to={"/"}>
+      <button className='home-button button'>Go Back Home</button>
+      </Link>
       <h2>Login Here</h2>
       <form onSubmit={handleSubmit}  className='login-form'>
         <label htmlFor='email'> Email:</label>
@@ -63,7 +62,6 @@ const LoginForm = () => {
         <button className="button" type="submit" >Login</button>
         <p className='login-p'>Don't have an account yet? Register <Link to="/register"  className='p-link'>here</Link></p>
       </form>
-      <Footer/>
     </div>
   );
 };
