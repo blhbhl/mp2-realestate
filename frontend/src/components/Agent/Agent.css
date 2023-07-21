@@ -1,5 +1,7 @@
-.form {
+.formAgent {
   display: inline-block;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .talkBtn {
@@ -11,18 +13,19 @@
   margin-left: 600px;
 }
 
-.talk {
+.talktoagent {
   font-size: 50px;
   color: #ffa500;
   margin-left: 345px;
 }
 
-label {
+.agentLabel {
+  background-color: none;
   margin-left: 350px;
   margin-bottom: 20px;
 }
 
-input[type='text'] {
+.talkto {
   width: 600px;
   padding: 12px 20px;
   margin-left: 350px;
@@ -33,7 +36,7 @@ input[type='text'] {
   box-sizing: border-box;
 }
 
-div {
+.formTalk {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -41,7 +44,7 @@ div {
   align-items: center;
 }
 
-textarea {
+.textHere {
   width: 600px;
   display: flex;
   height: 150px;

@@ -4,7 +4,6 @@ import { BsBookmarkHeart, BsBookmarkHeartFill } from "react-icons/bs";
 import "./BuyerPage.css";
 
 const BuyerPage = (props) => {
-  const [isActive, setIsActive] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   console.log(props)
   const Modal = ({ setOpenModal }) => {
@@ -58,7 +57,9 @@ const BuyerPage = (props) => {
                         <span className="pesos1">₱</span>
                         {props.price}
                       </h2>
-                      <button className="btn">Talk to Agent!</button>
+                      <a href="agent">
+                        <button className="btn">Talk to Agent!</button>
+                      </a>
                     </div>
                   </div>
                   <div className="main">
@@ -86,7 +87,7 @@ const BuyerPage = (props) => {
 
   return (
     <div className="flex flex-col mx-auto">
-      <img className="img1"  src={`http://localhost:3001/uploads/${props.imageFilename}`}  />
+      <img className="img1" src={`http://localhost:3001/uploads/${props.imageFilename}`} />
       <div key={props.id} className="id">
         <div className="card">
           <div className="icons">
@@ -94,21 +95,6 @@ const BuyerPage = (props) => {
               <span className="pesos">₱</span>
               {props.price}
             </h3>
-            <div className="icons2">
-              {isActive ? (
-                <BsBookmarkHeartFill
-                  onClick={() => {
-                    setIsActive(!isActive);
-                  }}
-                />
-              ) : (
-                <BsBookmarkHeart
-                  onClick={() => {
-                    setIsActive(!isActive);
-                  }}
-                />
-              )}
-            </div>
           </div>
           <h3 className="name1">{props.name}</h3>
           <p className="address">{props.address}</p>

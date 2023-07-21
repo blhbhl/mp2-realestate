@@ -12,6 +12,7 @@ import {
 import SellAHome from "./pages/SellAHome/SellAHome";
 import RegisterPage from "./pages/Register/RegisterPage";
 import LoginPage from "./pages/Login/LoginPage";
+import Agent from './components/Agent/Agent';
 
 
 const router = createBrowserRouter([
@@ -41,7 +42,11 @@ const router = createBrowserRouter([
   {
     path: "/residencies",
     element: <Main />
-  }
+  },
+  {
+    path: "/agent",
+    element: <Agent />
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
