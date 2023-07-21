@@ -15,6 +15,14 @@
   margin: 20px auto;
 }
 
+.noResults {
+  font-size: 25px;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  margin-right: -120px;
+}
+
 .position {
   position: relative;
   margin-bottom: 0.75rem;

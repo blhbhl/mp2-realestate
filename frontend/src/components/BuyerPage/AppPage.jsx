@@ -40,20 +40,20 @@ const AppPage = () => {
 
   useEffect(() => {
 
-    if (searchQuery === "")  {
+    if (searchQuery === "") {
       axios
-      .get("http://localhost:3001/properties")
-      .then((res) => {
+        .get("http://localhost:3001/properties")
+        .then((res) => {
 
-        if (!!res.data.data) {
-          setContents(res.data.data);
-        } else {
-          setContents([]);
-        }
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+          if (!!res.data.data) {
+            setContents(res.data.data);
+          } else {
+            setContents([]);
+          }
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     }
 
   }, [searchQuery]);
@@ -76,21 +76,21 @@ const AppPage = () => {
   const handleSearchClick = () => {
     console.log("Performing search for", searchQuery);
 
-        // Fetch all the properties from DB
-        let q = `?search=${searchQuery}`;
+    // Fetch all the properties from DB
+    let q = `?search=${searchQuery}`;
 
-        axios
-          .get("http://localhost:3001/properties" + q)
-          .then((res) => {
-            if (!!res.data.data) {
-              setContents(res.data.data);
-            } else {
-              setContents([]);
-            }
-          })
-          .catch((err) => {
-            console.error(err);
-          });
+    axios
+      .get("http://localhost:3001/properties" + q)
+      .then((res) => {
+        if (!!res.data.data) {
+          setContents(res.data.data);
+        } else {
+          setContents([]);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   return (
@@ -99,7 +99,7 @@ const AppPage = () => {
       <div className="flex flex-col">
         <div className="search-buypage">
           <HiLocationMarker color="var(--blue)" size={25} />
-        
+
           <input
             className="w-full outline-none py-2 ml-2"
             type="text"
@@ -129,7 +129,7 @@ const AppPage = () => {
               />
             ))
           ) : (
-            <h1> No results for {searchQuery} </h1>
+            <h1 className='noResults'> No results for {searchQuery} </h1>
           )}
         </div>
 
