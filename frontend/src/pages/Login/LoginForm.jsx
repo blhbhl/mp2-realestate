@@ -3,18 +3,24 @@ import "./Login.css"
 import { Link, useNavigate } from "react-router-dom";
 import Validation from './LoginValidation';
 import axios from 'axios';
+import { BiShow, BiHide } from "react-icons/bi"
+
 
 const LoginForm = () => {
   const [values, setValues] = useState({
     email: '',
     password: '',
   })
-
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const [errors, setErrors] = useState({})
   const handleInput = (e) => {
     setValues(prev => ({...prev, [e.target.name]: [e.target.value]}))
   }
+  
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
   
   axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
@@ -53,11 +59,17 @@ const LoginForm = () => {
           {errors.email && <span className='span-red'>{errors.email}</span>}
         <label htmlFor='password'>Password:</label>
           <input
-            type="password"
+            type={showPassword ? 'text' : 'password'}
             name='password'
             onChange={handleInput}
             placeholder='Enter password'
           />
+          {showPassword ? (
+            <BiHide onClick={handleTogglePassword} className='eye-icon'/>
+          ): (
+            <BiShow onClick={handleTogglePassword} className='eye-icon'/>
+          )}  
+          
           {errors.password && <span className='span-red'>{errors.password}</span>}   
         <button className="button" type="submit" >Login</button>
         <p className='login-p'>Don't have an account yet? Register <Link to="/register"  className='p-link'>here</Link></p>

@@ -3,8 +3,7 @@ import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import Validation from "./RegisterValidation";
 import axios from "axios";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
+import { BiShow, BiHide } from "react-icons/bi"
 
 const RegisterForm = () => {
   const [values, setValues] = useState({
@@ -12,11 +11,15 @@ const RegisterForm = () => {
     email: "",
     password: "",
   });
-
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const handleInput = (e) => {
     setValues(prev => ({...prev, [e.target.name]: [e.target.value]}))
+  };
+
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = (e) => {
@@ -61,11 +64,16 @@ const RegisterForm = () => {
         
         <label htmlFor="password">Password:</label>
         <input
-          type="password"
+          type={showPassword ? 'text' : 'password'}
           name="password"
           onChange={handleInput}
           placeholder="Enter password"
         />
+        {showPassword ? (
+            <BiHide onClick={handleTogglePassword} className='eye-icon2'/>
+          ): (
+            <BiShow onClick={handleTogglePassword} className='eye-icon2'/>
+          )}  
         {errors.password && <span className="span-red">{errors.password}</span>}
         
         <button type="submit" className="button">

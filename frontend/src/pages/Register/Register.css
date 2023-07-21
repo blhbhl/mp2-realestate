@@ -58,3 +58,10 @@
   color: red;
   font-size: 11px;
 }
+.eye-icon2 {
+  position: absolute;
+  right: 577px;
+  top: 440px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
