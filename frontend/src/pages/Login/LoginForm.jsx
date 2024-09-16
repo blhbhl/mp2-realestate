@@ -3,8 +3,7 @@ import "./Login.css"
 import { Link, useNavigate } from "react-router-dom";
 import Validation from './LoginValidation';
 import axios from 'axios';
-import Footer from '../../components/Footer/Footer';
-import Header from '../../components/Header/Header';
+import { BiShow, BiHide } from "react-icons/bi"
 
 
 const LoginForm = () => {
@@ -12,13 +11,18 @@ const LoginForm = () => {
     email: '',
     password: '',
   })
-
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const [errors, setErrors] = useState({})
   const handleInput = (e) => {
     setValues(prev => ({...prev, [e.target.name]: [e.target.value]}))
   }
-
+  
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+  
+  axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
     const err = Validation(values);
@@ -26,10 +30,10 @@ const LoginForm = () => {
     if(err.email === "" && err.password === "") {
       axios.post('http://localhost:3001/login', values)
       .then(res => {
-        if(res.data === "Success") {
+        if(res.data.Status === "Success") {
           navigate('/');
         } else {
-            alert("No record existed");
+            alert(res.data.Message);
         }
       })
       .catch(err => console.log(err));
@@ -40,7 +44,9 @@ const LoginForm = () => {
 
   return (
     <div className='formBody'>
-      <Header/>
+      <Link to={"/"}>
+      <button className='home-button button'>Go Back Home</button>
+      </Link>
       <h2>Login Here</h2>
       <form onSubmit={handleSubmit}  className='login-form'>
         <label htmlFor='email'> Email:</label>
@@ -53,16 +59,21 @@ const LoginForm = () => {
           {errors.email && <span className='span-red'>{errors.email}</span>}
         <label htmlFor='password'>Password:</label>
           <input
-            type="password"
+            type={showPassword ? 'text' : 'password'}
             name='password'
             onChange={handleInput}
             placeholder='Enter password'
           />
+          {showPassword ? (
+            <BiHide onClick={handleTogglePassword} className='eye-icon'/>
+          ): (
+            <BiShow onClick={handleTogglePassword} className='eye-icon'/>
+          )}  
+          
           {errors.password && <span className='span-red'>{errors.password}</span>}   
         <button className="button" type="submit" >Login</button>
         <p className='login-p'>Don't have an account yet? Register <Link to="/register"  className='p-link'>here</Link></p>
       </form>
-      <Footer/>
     </div>
   );
 };

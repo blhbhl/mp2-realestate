@@ -1,14 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/common";
 import OutsideClickHandler from "react-outside-click-handler";
 import LoginForm from "../../pages/Login/LoginForm";
+import axios from "axios";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
+  const [auth, setAuth] = useState(false);
+  const [message, setMessage] = useState('');
 
+  axios.defaults.withCredentials = true;
+  useEffect(() => {
+    axios.get('http://localhost:3001')
+    .then(res => {
+        if(res.data.Status ==="Success") {
+          setAuth(true);
+        } else {
+          
+        }
+    })
+  }, [])
+
+    const handleLogout = () => {
+      axios.get('http://localhost:3001/logout')
+      .then(res => {
+        if(res.data.Status === "Success") {
+          location.reload(true);
+          setAuth(false);
+        } else {
+          alert("Error");
+        }
+      }) .catch(err => console.log(err));
+    }
 
 
   return (
@@ -34,10 +60,14 @@ const Header = () => {
             <a href="#value">Our Value</a>
             <a href="#contact-us">Contact Us</a>
             <a href="#get-started">Get Started</a>
-            
-            <Link to="/login">
-            <button className="button" onClick={LoginForm}>Login</button>
-            </Link>
+            {
+              auth ?
+              <button className="button" onClick={handleLogout}>Logout</button>
+              :
+              <Link to="/login">
+              <button className="button" onClick={LoginForm}>Login</button>
+              </Link>
+            }
           </div>
         </OutsideClickHandler>
 

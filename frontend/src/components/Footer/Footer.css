@@ -21,3 +21,7 @@
         justify-content: center;
     }
 }
+.scroll {
+    align-items: center;
+    padding: 7px;
+}

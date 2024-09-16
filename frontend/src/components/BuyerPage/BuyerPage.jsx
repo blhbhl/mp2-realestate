@@ -4,9 +4,8 @@ import { BsBookmarkHeart, BsBookmarkHeartFill } from "react-icons/bs";
 import "./BuyerPage.css";
 
 const BuyerPage = (props) => {
-  const [isActive, setIsActive] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-
+  console.log(props)
   const Modal = ({ setOpenModal }) => {
     return (
       <div>
@@ -25,7 +24,7 @@ const BuyerPage = (props) => {
                         <div className="describe1">
                           <h2 className="title-name">Description</h2>
                           <hr className="line" />
-                          <p>{props.description}</p>
+                          <p className='description'>{props.additionalDetails}</p>
                         </div>
                         <div>
                           <h2 className="title-location">Location</h2>
@@ -58,11 +57,13 @@ const BuyerPage = (props) => {
                         <span className="pesos1">₱</span>
                         {props.price}
                       </h2>
-                      <button className="btn">Talk to Agent!</button>
+                      <a href="agent">
+                        <button className="btn">Talk to Agent!</button>
+                      </a>
                     </div>
                   </div>
                   <div className="main">
-                    <img className="img" alt="hero" src={props.image} />
+                    <img className="image" src={`http://localhost:3001/uploads/${props.imageFilename}`} />
                   </div>
                 </div>
               </section>
@@ -86,7 +87,7 @@ const BuyerPage = (props) => {
 
   return (
     <div className="flex flex-col mx-auto">
-      <img className="img1" src={props.image} />
+      <img className="img1" src={`http://localhost:3001/uploads/${props.imageFilename}`} />
       <div key={props.id} className="id">
         <div className="card">
           <div className="icons">
@@ -94,21 +95,6 @@ const BuyerPage = (props) => {
               <span className="pesos">₱</span>
               {props.price}
             </h3>
-            <div className="icons2">
-              {isActive ? (
-                <BsBookmarkHeartFill
-                  onClick={() => {
-                    setIsActive(!isActive);
-                  }}
-                />
-              ) : (
-                <BsBookmarkHeart
-                  onClick={() => {
-                    setIsActive(!isActive);
-                  }}
-                />
-              )}
-            </div>
           </div>
           <h3 className="name1">{props.name}</h3>
           <p className="address">{props.address}</p>
@@ -127,7 +113,7 @@ const BuyerPage = (props) => {
             <div className="buttonModal">
               <div>
                 <button
-                  className="btnModal"
+                  className="btnModal outline-none"
                   onClick={() => {
                     setModalOpen(true);
                   }}

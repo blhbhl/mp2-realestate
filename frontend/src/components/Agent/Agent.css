@@ -1,0 +1,59 @@
+.formAgent {
+  display: inline-block;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.talkBtn {
+  background-color: #1f3e72;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 600px;
+}
+
+.talktoagent {
+  font-size: 50px;
+  color: #ffa500;
+  margin-left: 345px;
+}
+
+.agentLabel {
+  background-color: none;
+  margin-left: 350px;
+  margin-bottom: 20px;
+}
+
+.talkto {
+  width: 600px;
+  padding: 12px 20px;
+  margin-left: 350px;
+  margin-bottom: 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.formTalk {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.textHere {
+  width: 600px;
+  display: flex;
+  height: 150px;
+  padding: 12px 20px;
+  margin-left: 350px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}

@@ -40,13 +40,6 @@ const Hero = () => {
             <span>Forget all difficulties in finding a residence for you</span>
           </div>
 
-          <div className="flexCenter search-bar">
-            <HiLocationMarker color="var(--blue)" size={25} />
-            <input type="text" 
-              value={searchQuery}
-              onChange={handleSearchChange}/>
-            <button className="button" onClick={handleSearchClick}>Search</button>
-          </div>
 
           <div className="flexCenter stats">
             <div className="flexColCenter stat">

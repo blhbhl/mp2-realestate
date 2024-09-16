@@ -22,7 +22,13 @@ const Footer = () => {
             <span>Services</span>
             <span>About Us</span>
           </div>
-          <ScrollToTop smooth top="400"/>
+          <ScrollToTop 
+            smooth top="400" 
+            width="25" 
+            height="25"
+            className="scroll"
+            viewBox="0 0 250 250"
+            />
         </div>
       </div>
     </div>

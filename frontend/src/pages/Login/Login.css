@@ -57,3 +57,11 @@
   color: red;
   font-size: 11px;
 }
+
+.eye-icon {
+  position: absolute;
+  right: 577px;
+  top: 360px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
